@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 class UserController extends Controller {
 
     public function actionLogin() {
-        echo "Hello world!";
+        $this->layout = false;
+        return $this->render('login');
     }
 }
