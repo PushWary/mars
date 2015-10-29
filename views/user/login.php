@@ -20,12 +20,12 @@
       <hr>
       <div class="tab-content">
         <div id="login" class="tab-pane active">
-          <form action="index.html">
+          <form action="/user/login" method="POST">
             <p class="text-muted text-center">
               输入你的用户名和密码
             </p>
-            <input type="text" placeholder="用户名" class="form-control top">
-            <input type="password" placeholder="密 码" class="form-control bottom">
+            <input type="text" placeholder="用户名" class="form-control top" name="user[username]">
+            <input type="password" placeholder="密 码" class="form-control bottom" name="user[password]">
             <div class="checkbox">
               <label>
                 <input type="checkbox"> 记住我
