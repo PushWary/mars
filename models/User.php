@@ -6,7 +6,7 @@ use Yii;
 use yii\db\ActiveRecord;
 use yii\db\Query;
 
-class User extends ActiveRecord {
+class User extends BaseRecord {
 
     const STATUS_DEF = array(
         'normal' => 0,  // 未激活
