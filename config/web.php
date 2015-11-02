@@ -44,6 +44,22 @@ $config = [
            'enablePrettyUrl' => true,
            'showScriptName' => false,
        ],
+       'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport' => false,  // true只是生成邮件在runtime文件夹下，不发邮件, false发送邮件
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => $params['adminSMTPHost'],
+                'username' => $params['adminEmail'],
+                'password' => $params['adminEmailPassword'],
+                'port' => 25,
+                'encryption' => 'tls',
+            ],
+            'messageConfig' => [
+                'charset' => 'UTF-8',
+                'from' => [$params['adminEmail'] => 'admin'],
+            ],
+       ],
     ],
     'params' => $params,
 ];

@@ -28,17 +28,28 @@ class UserController extends Controller {
     public function actionRegister() {
         $this->layout = false;
         if (isset($_POST['user'])) {
-            var_dump($_POST['user']);
             $model = new User();
             $model->username = $_POST['user']['username'];
             $model->password = $_POST['user']['password'];
             $model->email = $_POST['user']['email'];
             if ($model->save()) {
+                $this->sendVaildateMail($model->email);
                 return "注册成功";
             } else {
                 return "注册失败";
             }
-            
         }
+    }
+
+    /**
+     * 发送验证邮件方法
+     * @param $toEmail 发送邮件的目标邮箱
+     */
+    private function sendVaildateMail($toEmail) {
+        $mail = Yii::$app->mailer->compose();
+        $mail->setTo($toEmail);
+        $mail->setSubject("测试邮件");
+        $mail->setTextBody('欢迎测试mars.com');
+        $mail->send();
     }
 }
