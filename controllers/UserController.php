@@ -13,6 +13,9 @@ class UserController extends Controller {
 
     public $enableCsrfValidation = false;
 
+    /**
+     * 登录
+     */
     public function actionLogin() {
         $this->layout = false;
         if (isset($_POST['user'])) {
@@ -26,6 +29,9 @@ class UserController extends Controller {
         return $this->render('login');
     }
 
+    /**
+     * 注册
+     */
     public function actionRegister() {
         $this->layout = false;
         if (isset($_POST['user'])) {
@@ -47,14 +53,40 @@ class UserController extends Controller {
     }
 
     /**
+     * 验证注册邮箱
+     */
+    public function actionActivemail($token) {
+        $userValidate = UserValidate::find()->where(['token'=>$token])->one();
+        if ($userValidate) {
+            $user = User::find()->where(['id'=>$userValidate->userid])->one();
+            $transtion = Yii::$app->db->beginTransaction();
+            try {
+                $user->status = User::STATUS_DEF['active'];
+                if (!$user->save()) {
+                    $transtion->rollBack();
+                    return "激活失败";
+                }
+
+                $transtion->commit();
+                return "激活成功";
+            } catch (Exception $e) {
+                $transtion->rollBack();
+                return "激活失败";
+            }
+            
+        }else {
+            return "激活失败";
+        }
+    }
+
+    /**
      * 发送验证邮件方法
      * @param $toEmail 发送邮件的目标邮箱
      */
     private function sendVaildateMail($toEmail, $token) {
-        $mail = Yii::$app->mailer->compose();
+        $mail = Yii::$app->mailer->compose('user-validate', ['token'=>$token]);
         $mail->setTo($toEmail);
         $mail->setSubject("欢迎注册mars");
-        $mail->setTextBody('请激活您的邮箱'.$token);
         $mail->send();
     }
 }
