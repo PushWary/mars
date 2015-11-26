@@ -12,6 +12,8 @@ class OperationLog extends BaseRecord {
         return "mars_operation_log";
     }
 
+    const TYPE_USER = 1;  // 用户操作
+
     /**
      * 保存日志
      * @param $content 日志内容
