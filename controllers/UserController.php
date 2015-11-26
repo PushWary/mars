@@ -44,7 +44,7 @@ class UserController extends Controller {
                 $userValidate->email = $model->email;
                 $userValidate->userid = $model->id;
                 $userValidate->save();
-                $this->sendVaildateMail($model->email, $userValidate->token);
+                $this->sendVaildateMail($model->email, 'user-validate', ['token'=>$userValidate->token]);
                 return "注册成功";
             } else {
                 return "注册失败";
@@ -83,8 +83,8 @@ class UserController extends Controller {
      * 发送验证邮件方法
      * @param $toEmail 发送邮件的目标邮箱
      */
-    private function sendVaildateMail($toEmail, $token) {
-        $mail = Yii::$app->mailer->compose('user-validate', ['token'=>$token]);
+    private function sendVaildateMail($toEmail, $template, $params=array()) {
+        $mail = Yii::$app->mailer->compose($template, $params);
         $mail->setTo($toEmail);
         $mail->setSubject("欢迎注册mars");
         $mail->send();
