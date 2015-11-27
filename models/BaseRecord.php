@@ -10,7 +10,7 @@ class BaseRecord extends ActiveRecord {
 
     public function beforeSave($insert) {
         if (parent::beforeSave($insert)) {
-            $this->created = time();
+            $this->created = date("Y-m-d H:i:s", time());
             return true;
         } else {
             return false;
