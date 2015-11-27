@@ -22,25 +22,22 @@ class OperationLog extends BaseRecord {
      * @param $creatorid 创建人id
      * @param $remark 备注
      */
-    public static saveLog($content, $targetid, $targetType, $creatorid, $remark=null) {
-        $operationLog = new OperationLog();
-        $operationLog->content = $content;
-        $operationLog->targetid = $targetid;
-        $operationLog->target_type = $targetType;
-        $operationLog->creatorid = $creatorid;
-        if ($remark != null) {
-            $operationLog->remark = $remark;
+    public function saveLog($content,$targetId,$targetType,$remark=null) {
+        $operationLogModel = new OperationLog();
+        $operationLogModel ->targetid = $targetId;
+        $operationLogModel ->content = $content;
+        if($remark != null) {
+            $operationLogModel->remark = $remark;
+        }
+        $operationLogModel->target_type = $targetType;
+        $operationLogModel->creatorid = 0;  // 暂时未0
+        if(!$operationLogModel->save()) {
+            $data['result']=false;
+            $data['message']=$careerError;
+            return $data;
         }
 
-        $result = array();
-        if (!$operationLog->save()) {
-            $result['result'] = false;
-            $result['message'] = "保存日志失败";
-        }else {
-            $result['result'] = true;
-            $result['message'] = "保存日志成功";
-        }
-
-        return $result;
+        $data['result']=true;
+        return $data;
     }
 }

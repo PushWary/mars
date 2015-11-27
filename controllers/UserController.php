@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\User;
 use app\models\UserValidate;
+use app\models\OperationLog;
 
 class UserController extends Controller {
 
@@ -19,9 +20,24 @@ class UserController extends Controller {
     public function actionLogin() {
         $this->layout = false;
         if (isset($_POST['user'])) {
-            $checkLogin = User::validateLogin($_POST['user']['username'], $_POST['user']['password']);
-            if ($checkLogin) {
-                return "登录成功";
+            $username = $_POST['user']['username'];
+            $password = $_POST['user']['password'];
+            $loginUser = User::validateLogin($username, $password);
+            if ($loginUser) {
+                $transtion = Yii::$app->db->beginTransaction();
+                try {
+                    $resultLog = OperationLog::saveLog($username.'登录', $loginUser->id, OperationLog::TYPE_USER);
+                    if (!$resultLog['result']) {
+                        $transtion->rollBack();
+                        return $resultLog['message'];
+                    }
+
+                    $transtion->commit();
+                    return "登录成功";
+                } catch (Exception $e) {
+                    $transtion->rollBack();
+                    return "发生异常,登录失败";
+                }
             }else {
                 return "登录失败";
             }
@@ -39,14 +55,32 @@ class UserController extends Controller {
             $model->username = $_POST['user']['username'];
             $model->password = $_POST['user']['password'];
             $model->email = $_POST['user']['email'];
-            if ($model->save()) {
-                $userValidate = new UserValidate();
-                $userValidate->email = $model->email;
-                $userValidate->userid = $model->id;
-                $userValidate->save();
-                $this->sendVaildateMail($model->email, 'user-validate', ['token'=>$userValidate->token]);
-                return "注册成功";
-            } else {
+            $transtion = Yii::$app->db->beginTransaction();
+            try {
+                if ($model->save()) {
+                    $userValidate = new UserValidate();
+                    $userValidate->email = $model->email;
+                    $userValidate->userid = $model->id;
+                    if (!$userValidate->save()) {
+                        $transtion->rollBack();
+                        return "注册失败";
+                    }
+                    //$this->sendVaildateMail($model->email, 'user-validate', ['token'=>$userValidate->token]);
+
+                    $resultLog = OperationLog::saveLog($model->username."注册", $model->id, OperationLog::TYPE_USER);
+                    if (!$resultLog['result']) {
+                        $transtion->rollBack();
+                        return $resultLog['message'];
+                    }
+
+                    $transtion->commit();
+                    return "注册成功";
+                } else {
+                    $transtion->rollBack();
+                    return "注册失败";
+                }
+            } catch (Exception $e) {
+                $transtion->rollBack();
                 return "注册失败";
             }
         }
@@ -67,6 +101,11 @@ class UserController extends Controller {
                     return "激活失败";
                 }
 
+                $resultLog = OperationLog::saveLog($user->username."激活", $user->id, OperationLog::TYPE_USER);
+                if (!$resultLog['result']) {
+                    $transtion->rollBack();
+                    return $resultLog['message'];
+                }
                 $transtion->commit();
                 return "激活成功";
             } catch (Exception $e) {
