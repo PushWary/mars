@@ -27,6 +27,16 @@ class User extends BaseRecord {
     }
 
     /**
+     * @return array the validation rules.
+     */
+    public function rules() {
+        return [
+            [['username', 'password', 'email'], 'required'],
+            [['username'], 'unique']
+        ];
+    }
+
+    /**
      * 检查用户登录
      * @param $username 用户名
      * @param $password 密码
@@ -38,6 +48,6 @@ class User extends BaseRecord {
             'username' => strip_tags($username), 
             'password' => crypt(strip_tags($password), Yii::$app->params['passwordKey']),
             'status' => self::STATUS_DEF['active'],
-            ])->exists();
+            ])->one();
     }
 }
