@@ -33,7 +33,7 @@ class UserController extends Controller {
                     }
 
                     $transtion->commit();
-                    return "登录成功";
+                    return $this->render("index");
                 } catch (Exception $e) {
                     $transtion->rollBack();
                     return "发生异常,登录失败";
