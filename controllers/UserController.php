@@ -7,40 +7,30 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\User;
+use app\models\LoginForm;
 use app\models\UserValidate;
 use app\models\OperationLog;
 
-class UserController extends Controller {
+class UserController extends BaseController {
 
     public $enableCsrfValidation = false;
+
+    // authKey的前缀
+    const AUTH_PREFIX = "ams";
 
     /**
      * 登录
      */
     public function actionLogin() {
         $this->layout = false;
-        if (isset($_POST['user'])) {
-            $username = $_POST['user']['username'];
-            $password = $_POST['user']['password'];
-            $loginUser = User::validateLogin($username, $password);
-            if ($loginUser) {
-                $transtion = Yii::$app->db->beginTransaction();
-                try {
-                    $resultLog = OperationLog::saveLog($username.'登录', $loginUser->id, OperationLog::TYPE_USER);
-                    if (!$resultLog['result']) {
-                        $transtion->rollBack();
-                        return $resultLog['message'];
-                    }
 
-                    $transtion->commit();
-                    return $this->render("index");
-                } catch (Exception $e) {
-                    $transtion->rollBack();
-                    return "发生异常,登录失败";
-                }
-            }else {
-                return "登录失败";
-            }
+        if (!\Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
         }
         return $this->render('login');
     }
@@ -55,6 +45,7 @@ class UserController extends Controller {
             $model->username = $_POST['user']['username'];
             $model->password = $_POST['user']['password'];
             $model->email = $_POST['user']['email'];
+            $model->authKey = $this->getUUID(self::AUTH_PREFIX);
             $transtion = Yii::$app->db->beginTransaction();
             try {
                 if ($model->save()) {
@@ -112,10 +103,18 @@ class UserController extends Controller {
                 $transtion->rollBack();
                 return "激活失败";
             }
-            
+
         }else {
             return "激活失败";
         }
+    }
+
+    /**
+     *  访问主页
+     */
+    public function actionIndex() {
+        $this->layout = false;
+        return $this->render("index");
     }
 
     /**
@@ -128,4 +127,5 @@ class UserController extends Controller {
         $mail->setSubject("欢迎注册mars");
         $mail->send();
     }
+
 }
