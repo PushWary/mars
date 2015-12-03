@@ -22,7 +22,7 @@ class UserController extends BaseController {
      * 登录
      */
     public function actionLogin() {
-        $this->layout = false;
+        $this->layout = 'userLayout';
 
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -32,14 +32,14 @@ class UserController extends BaseController {
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         }
-        return $this->render('login');
+        return $this->render('_login');
     }
 
     /**
      * 注册
      */
     public function actionRegister() {
-        $this->layout = false;
+        $this->layout = 'userLayout';
         if (isset($_POST['user'])) {
             $model = new User();
             $model->username = $_POST['user']['username'];
@@ -74,7 +74,17 @@ class UserController extends BaseController {
                 $transtion->rollBack();
                 return "注册失败";
             }
+        }else {
+            return $this->render('_register');
         }
+    }
+
+    /**
+     * 忘记密码
+     */
+    public function actionLostpwd() {
+        $this->layout = 'userLayout';
+        return $this->render('_lostpwd');
     }
 
     /**
