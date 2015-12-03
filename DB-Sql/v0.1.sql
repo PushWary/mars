@@ -18,6 +18,7 @@ CREATE TABLE `mars_user` (
   `password` varchar(64) NOT NULL COMMENT '密码',
   `email` varchar(100) NOT NULL COMMENT '注册邮箱',
   `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '状态，0:未激活，1:激活',
+  `authKey` varchar(62) NOT NULL COMMENT '验证key',
   `created` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8
