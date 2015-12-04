@@ -1,8 +1,10 @@
-'use strict';
+(function() {
+    'use strict';
 
-angular.module('marsApp').controller('ApplicationCtrl', ['$location', '$scope', ApplicationCtrl]);
+    angular.module('marsApp').controller('ApplicationCtrl', ['$location', '$scope', ApplicationCtrl]);
 
-function ApplicationCtrl($location, $scope) {
-    
+    function ApplicationCtrl($location, $scope) {
+        
 
-}
+    }
+})();
