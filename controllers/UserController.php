@@ -29,10 +29,16 @@ class UserController extends BaseController {
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+        if ($this->getPostJSON()) {
+            if ($model->load($this->getPostJSON()) && $model->login()) {
+                $result = ['success'=>1, 'message'=> '登录成功'];
+                return json_encode($result);
+            }else {
+                return json_encode(['success'=>0, 'message'=> '登录失败']);
+            }
+        }else {
+            return $this->render('_login');
         }
-        return $this->render('_login');
     }
 
     /**

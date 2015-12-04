@@ -22,4 +22,16 @@ class BaseController extends Controller {
         $uuid .= substr($str,20,12);
         return $prefix.$uuid;
     }
+
+    /**
+     *  获取post的JSON数据并解析成数组
+     * @return 数组或false
+     */
+    public function getPostJSON() {
+        if (isset($GLOBALS['HTTP_RAW_POST_DATA'])) {
+            return json_decode($GLOBALS['HTTP_RAW_POST_DATA'], true);
+        }else {
+            return false;
+        }
+    }
 }
