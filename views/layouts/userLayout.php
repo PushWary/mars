@@ -17,7 +17,7 @@ use yii\helpers\Url;
     <!-- Metis core stylesheet -->
     <link rel="stylesheet" href="/css/main.min.css">
   </head>
-  <body class="login" ng-app="marsApp" ng-controller="ApplicationCtrl">
+  <body class="login" ng-app="marsApp">
     <div class="form-signin">
       <div class="text-center">
         <img src="/img/logo.png" alt="Metis Logo">
@@ -48,7 +48,6 @@ use yii\helpers\Url;
     <!--scripts-->
     <script src="/js/angular.js"></script>
     <script src="/js/scripts/marsApp.js"></script>
-    <script src="/js/scripts/controllers/application.js"></script>
     <script src="/js/scripts/controllers/login.js"></script>
     <script src="/js/scripts/services/user.js"></script>
     <script src="/js/scripts/routes.js"></script>
