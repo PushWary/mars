@@ -15,4 +15,5 @@
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
   </form>
+  <alertMsg message="{{ alertMsg }}"></alertMsg>
 </div>

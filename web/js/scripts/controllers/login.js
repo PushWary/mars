@@ -5,6 +5,8 @@
 
     function LoginCtrl($location, $scope, UserService) {
 
+        $scope.alertMsg = "sdfaslgjas";
+
         $scope.submit = function(name, password, remberMe) {
             var loginForm = {'LoginForm' : {}};
             loginForm['LoginForm'].username = name;
@@ -16,7 +18,7 @@
                 if(data.success === 1) {
                     location.href = 'user/index';
                 }else {
-                    // TODO 登录失败提示
+                    $scope.alertMsg="登录失败";
                 }
             });
         };
