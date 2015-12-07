@@ -10,6 +10,10 @@
             return $http.post('user/login', loginForm);
         };
 
+        service.register = function(user) {
+            return $http.post('user/register', user);
+        };
+
         return service;
     }
 })();
