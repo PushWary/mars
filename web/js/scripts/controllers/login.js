@@ -5,8 +5,6 @@
 
     function LoginCtrl($location, $scope, UserService) {
 
-        $scope.alertMsg = "sdfaslgjas";
-
         $scope.submit = function(name, password, remberMe) {
             var loginForm = {'LoginForm' : {}};
             loginForm['LoginForm'].username = name;
