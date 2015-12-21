@@ -5,6 +5,11 @@
 
     function LoginCtrl($location, $scope, UserService) {
 
+        // 表单中输入值发生改变
+        $scope.change = function(){
+            $scope.show = false;
+        };
+
         $scope.submit = function(name, password, remberMe) {
             var loginForm = {'LoginForm' : {}};
             loginForm['LoginForm'].username = name;
@@ -16,7 +21,8 @@
                 if(data.success === 1) {
                     location.href = 'user/index';
                 }else {
-                    $scope.alertMsg="登录失败";
+                    $scope.show = true;
+                    $scope.alertMsg = data.message;
                 }
             });
         };
