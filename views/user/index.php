@@ -56,44 +56,44 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <header class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span> 
-                <span class="icon-bar"></span> 
-                <span class="icon-bar"></span> 
-                <span class="icon-bar"></span> 
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
               </button>
               <a href="index.html" class="navbar-brand">
                 <img src="/img/logo.png" alt="">
-              </a> 
+              </a>
             </header>
             <div class="topnav">
               <div class="btn-group">
                 <a data-placement="bottom" data-original-title="Fullscreen" data-toggle="tooltip" class="btn btn-default btn-sm" id="toggleFullScreen">
                   <i class="glyphicon glyphicon-fullscreen"></i>
-                </a> 
+                </a>
               </div>
               <div class="btn-group">
                 <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" class="btn btn-default btn-sm">
                   <i class="fa fa-envelope"></i>
-                  <span class="label label-warning">5</span> 
-                </a> 
+                  <span class="label label-warning">5</span>
+                </a>
                 <a data-placement="bottom" data-original-title="Messages" href="#" data-toggle="tooltip" class="btn btn-default btn-sm">
                   <i class="fa fa-comments"></i>
-                  <span class="label label-danger">4</span> 
-                </a> 
+                  <span class="label label-danger">4</span>
+                </a>
                 <a data-toggle="modal" data-original-title="Help" data-placement="bottom" class="btn btn-default btn-sm" href="#helpModal">
                   <i class="fa fa-question"></i>
-                </a> 
+                </a>
               </div>
               <div class="btn-group">
                 <a href="login.html" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-metis-1 btn-sm">
                   <i class="fa fa-power-off"></i>
-                </a> 
+                </a>
               </div>
               <div class="btn-group">
                 <a data-placement="bottom" data-original-title="Show / Hide Left" data-toggle="tooltip" class="btn btn-primary btn-sm toggle-left" id="menu-toggle">
                   <i class="fa fa-bars"></i>
-                </a> 
-                <a data-placement="bottom" data-original-title="Show / Hide Right" data-toggle="tooltip" class="btn btn-default btn-sm toggle-right"> <span class="glyphicon glyphicon-comment"></span>  </a> 
+                </a>
+                <a data-placement="bottom" data-original-title="Show / Hide Right" data-toggle="tooltip" class="btn btn-default btn-sm toggle-right"> <span class="glyphicon glyphicon-comment"></span>  </a>
               </div>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -107,7 +107,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     Form Elements
                     <b class="caret"></b>
-                  </a> 
+                  </a>
                   <ul class="dropdown-menu">
                     <li> <a href="form-general.html">General</a>  </li>
                     <li> <a href="form-validation.html">Validation</a>  </li>
@@ -128,7 +128,7 @@
             <button class="btn btn-primary btn-sm text-muted" type="button">
                 <i class="fa fa-search"></i>
             </button>
-        </span> 
+        </span>
               </div>
             </form><!-- /.main-search -->
           </div><!-- /.search-bar -->
@@ -141,13 +141,13 @@
       <div id="left">
         <div class="media user-media bg-dark dker">
           <div class="user-media-toggleHover">
-            <span class="fa fa-user"></span> 
+            <span class="fa fa-user"></span>
           </div>
           <div class="user-wrapper bg-dark">
             <a class="user-link" href="">
               <img class="media-object img-thumbnail user-img" alt="User Picture" src="/img/user.gif">
-              <span class="label label-danger user-label">16</span> 
-            </a> 
+              <span class="label label-danger user-label">16</span>
+            </a>
             <div class="media-body">
               <h5 class="media-heading">Archie</h5>
               <ul class="list-unstyled user-info">
@@ -155,7 +155,7 @@
                 <li>Last Access :
                   <br>
                   <small>
-                    <i class="fa fa-calendar"></i>&nbsp;16 Mar 16:32</small> 
+                    <i class="fa fa-calendar"></i>&nbsp;16 Mar 16:32</small>
                 </li>
               </ul>
             </div>
@@ -168,120 +168,120 @@
           <li class="nav-divider"></li>
           <li class="">
             <a href="dashboard.html">
-              <i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span> 
-            </a> 
+              <i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span>
+            </a>
           </li>
           <li class="">
             <a href="javascript:;">
               <i class="fa fa-building "></i>
-              <span class="link-title">Layouts</span> 
-              <span class="fa arrow"></span> 
-            </a> 
+              <span class="link-title">Layouts</span>
+              <span class="fa arrow"></span>
+            </a>
             <ul>
               <li>
                 <a href="boxed.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Boxed Layout </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Boxed Layout </a>
               </li>
               <li>
                 <a href="fixed-header-boxed.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Boxed Layout &amp; Fixed Header </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Boxed Layout &amp; Fixed Header </a>
               </li>
               <li>
                 <a href="fixed-header-fixed-mini-sidebar.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Fixed Header and Fixed Mini Menu </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Fixed Header and Fixed Mini Menu </a>
               </li>
               <li>
                 <a href="fixed-header-menu.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Fixed Header &amp; Menu </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Fixed Header &amp; Menu </a>
               </li>
               <li>
                 <a href="fixed-header-mini-sidebar.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Fixed Header &amp; Mini Menu </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Fixed Header &amp; Mini Menu </a>
               </li>
               <li>
                 <a href="fixed-header.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Fixed Header </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Fixed Header </a>
               </li>
               <li>
                 <a href="fixed-menu-boxed.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Boxed Layout &amp; Fixed Menu </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Boxed Layout &amp; Fixed Menu </a>
               </li>
               <li>
                 <a href="fixed-menu.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Fixed Menu </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Fixed Menu </a>
               </li>
               <li>
                 <a href="fixed-mini-sidebar.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Fixed &amp; Mini Menu </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Fixed &amp; Mini Menu </a>
               </li>
               <li>
                 <a href="fxhmoxed.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Boxed and Fixed Header &amp; Nav </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Boxed and Fixed Header &amp; Nav </a>
               </li>
               <li>
                 <a href="no-header-sidebar.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; No Header &amp; Sidebars </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; No Header &amp; Sidebars </a>
               </li>
               <li>
                 <a href="no-header.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; No Header </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; No Header </a>
               </li>
               <li>
                 <a href="no-left-right-sidebar.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; No Left &amp; Right Sidebar </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; No Left &amp; Right Sidebar </a>
               </li>
               <li>
                 <a href="no-left-sidebar-main-search.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; No Left Sidebar &amp; Main Search </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; No Left Sidebar &amp; Main Search </a>
               </li>
               <li>
                 <a href="no-left-sidebar.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; No Left Sidebar </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; No Left Sidebar </a>
               </li>
               <li>
                 <a href="no-main-search.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; No Main Search </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; No Main Search </a>
               </li>
               <li>
                 <a href="no-right-sidebar.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; No Right Sidebar </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; No Right Sidebar </a>
               </li>
               <li>
                 <a href="sm.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Mini Sidebar </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Mini Sidebar </a>
               </li>
             </ul>
           </li>
           <li class="">
             <a href="javascript:;">
               <i class="fa fa-tasks"></i>
-              <span class="link-title">Components</span> 
-              <span class="fa arrow"></span> 
-            </a> 
+              <span class="link-title">Components</span>
+              <span class="fa arrow"></span>
+            </a>
             <ul>
               <li>
                 <a href="bgcolor.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Bg Color </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Bg Color </a>
               </li>
               <li>
                 <a href="bgimage.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Bg Image </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Bg Image </a>
               </li>
               <li>
                 <a href="button.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Buttons </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Buttons </a>
               </li>
               <li>
                 <a href="icon.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Icon </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Icon </a>
               </li>
               <li>
                 <a href="pricing.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Pricing Table </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Pricing Table </a>
               </li>
               <li>
                 <a href="progress.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Progress </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Progress </a>
               </li>
             </ul>
           </li>
@@ -290,108 +290,108 @@
               <i class="fa fa-pencil"></i>
               <span class="link-title">
             Forms
-      </span> 
-              <span class="fa arrow"></span> 
-            </a> 
+      </span>
+              <span class="fa arrow"></span>
+            </a>
             <ul>
               <li>
                 <a href="form-general.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Form General </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Form General </a>
               </li>
               <li>
                 <a href="form-validation.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Form Validation </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Form Validation </a>
               </li>
               <li>
                 <a href="form-wizard.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Form Wizard </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Form Wizard </a>
               </li>
               <li>
                 <a href="form-wysiwyg.html">
-                  <i class="fa fa-angle-right"></i>&nbsp; Form WYSIWYG </a> 
+                  <i class="fa fa-angle-right"></i>&nbsp; Form WYSIWYG </a>
               </li>
             </ul>
           </li>
           <li>
             <a href="table.html">
               <i class="fa fa-table"></i>
-              <span class="link-title">Tables</span> 
-            </a> 
+              <span class="link-title">Tables</span>
+            </a>
           </li>
           <li>
             <a href="file.html">
               <i class="fa fa-file"></i>
               <span class="link-title">
       File Manager
-          </span> 
-            </a> 
+          </span>
+            </a>
           </li>
           <li>
             <a href="typography.html">
               <i class="fa fa-font"></i>
               <span class="link-title">
             Typography
-          </span>  </a> 
+          </span>  </a>
           </li>
           <li>
             <a href="maps.html">
               <i class="fa fa-map-marker"></i><span class="link-title">
             Maps
-          </span> 
-            </a> 
+          </span>
+            </a>
           </li>
           <li>
             <a href="chart.html">
               <i class="fa fa fa-bar-chart-o"></i>
               <span class="link-title">
             Charts
-          </span> 
-            </a> 
+          </span>
+            </a>
           </li>
           <li>
             <a href="calendar.html">
               <i class="fa fa-calendar"></i>
               <span class="link-title">
             Calendar
-          </span> 
-            </a> 
+          </span>
+            </a>
           </li>
           <li>
             <a href="javascript:;">
               <i class="fa fa-exclamation-triangle"></i>
               <span class="link-title">
               Error Pages
-            </span> 
-              <span class="fa arrow"></span> 
-            </a> 
+            </span>
+              <span class="fa arrow"></span>
+            </a>
             <ul>
               <li>
                 <a href="403.html">
-                  <i class="fa fa-angle-right"></i>&nbsp;403</a> 
+                  <i class="fa fa-angle-right"></i>&nbsp;403</a>
               </li>
               <li>
                 <a href="404.html">
-                  <i class="fa fa-angle-right"></i>&nbsp;404</a> 
+                  <i class="fa fa-angle-right"></i>&nbsp;404</a>
               </li>
               <li>
                 <a href="405.html">
-                  <i class="fa fa-angle-right"></i>&nbsp;405</a> 
+                  <i class="fa fa-angle-right"></i>&nbsp;405</a>
               </li>
               <li>
                 <a href="500.html">
-                  <i class="fa fa-angle-right"></i>&nbsp;500</a> 
+                  <i class="fa fa-angle-right"></i>&nbsp;500</a>
               </li>
               <li>
                 <a href="503.html">
-                  <i class="fa fa-angle-right"></i>&nbsp;503</a> 
+                  <i class="fa fa-angle-right"></i>&nbsp;503</a>
               </li>
               <li>
                 <a href="offline.html">
-                  <i class="fa fa-angle-right"></i>&nbsp;offline</a> 
+                  <i class="fa fa-angle-right"></i>&nbsp;offline</a>
               </li>
               <li>
                 <a href="countdown.html">
-                  <i class="fa fa-angle-right"></i>&nbsp;Under Construction</a> 
+                  <i class="fa fa-angle-right"></i>&nbsp;Under Construction</a>
               </li>
             </ul>
           </li>
@@ -400,16 +400,16 @@
               <i class="fa fa-columns"></i>
               <span class="link-title">
     Grid
-    </span> 
-            </a> 
+    </span>
+            </a>
           </li>
           <li>
             <a href="blank.html">
               <i class="fa fa-square-o"></i>
               <span class="link-title">
     Blank Page
-    </span> 
-            </a> 
+    </span>
+            </a>
           </li>
           <li class="nav-divider"></li>
           <li>
@@ -417,35 +417,35 @@
               <i class="fa fa-sign-in"></i>
               <span class="link-title">
     Login Page
-    </span> 
-            </a> 
+    </span>
+            </a>
           </li>
           <li>
             <a href="javascript:;">
               <i class="fa fa-code"></i>
               <span class="link-title">
-        Unlimited Level Menu 
-        </span> 
-              <span class="fa arrow"></span> 
-            </a> 
+        Unlimited Level Menu
+        </span>
+              <span class="fa arrow"></span>
+            </a>
             <ul>
               <li>
-                <a href="javascript:;">Level 1  <span class="fa arrow"></span>  </a> 
+                <a href="javascript:;">Level 1  <span class="fa arrow"></span>  </a>
                 <ul>
                   <li> <a href="javascript:;">Level 2</a>  </li>
                   <li> <a href="javascript:;">Level 2</a>  </li>
                   <li>
-                    <a href="javascript:;">Level 2  <span class="fa arrow"></span>  </a> 
+                    <a href="javascript:;">Level 2  <span class="fa arrow"></span>  </a>
                     <ul>
                       <li> <a href="javascript:;">Level 3</a>  </li>
                       <li> <a href="javascript:;">Level 3</a>  </li>
                       <li>
-                        <a href="javascript:;">Level 3  <span class="fa arrow"></span>  </a> 
+                        <a href="javascript:;">Level 3  <span class="fa arrow"></span>  </a>
                         <ul>
                           <li> <a href="javascript:;">Level 4</a>  </li>
                           <li> <a href="javascript:;">Level 4</a>  </li>
                           <li>
-                            <a href="javascript:;">Level 4  <span class="fa arrow"></span>  </a> 
+                            <a href="javascript:;">Level 4  <span class="fa arrow"></span>  </a>
                             <ul>
                               <li> <a href="javascript:;">Level 5</a>  </li>
                               <li> <a href="javascript:;">Level 5</a>  </li>
@@ -462,7 +462,7 @@
               </li>
               <li> <a href="javascript:;">Level 1</a>  </li>
               <li>
-                <a href="javascript:;">Level 1  <span class="fa arrow"></span>  </a> 
+                <a href="javascript:;">Level 1  <span class="fa arrow"></span>  </a>
                 <ul>
                   <li> <a href="javascript:;">Level 2</a>  </li>
                   <li> <a href="javascript:;">Level 2</a>  </li>
@@ -473,157 +473,11 @@
           </li>
         </ul><!-- /#menu -->
       </div><!-- /#left -->
-      <div id="content">
+      <div id="content" >
         <div class="outer">
           <div class="inner bg-light lter">
-            <div class="col-lg-12">
-              <h1 id="bootstrap-admin-template">Bootstrap-Admin-Template</h1>
-              <ul>
-                <li>
-                  <a href="https://travis-ci.org/onokumus/Bootstrap-Admin-Template">
-                    <img src="https://travis-ci.org/onokumus/Bootstrap-Admin-Template.svg" alt="Build Status">
-                  </a> 
-                </li>
-                <li>
-                  <a href="https://david-dm.org/onokumus/Bootstrap-Admin-Template">
-                    <img src="https://david-dm.org/onokumus/Bootstrap-Admin-Template.svg?theme=shields.io" alt="Dependency Status">
-                  </a> 
-                </li>
-                <li>
-                  <a href="https://david-dm.org/onokumus/Bootstrap-Admin-Template#info=devDependencies">
-                    <img src="https://david-dm.org/onokumus/Bootstrap-Admin-Template/dev-status.svg?theme=shields.io" alt="devDependency Status">
-                  </a> 
-                </li>
-                <li>
-                  <a href="http://gruntjs.com/">
-                    <img src="https://cdn.gruntjs.com/builtwith.png" alt="Built with Grunt">
-                  </a> 
-                </li>
-              </ul>
-              <blockquote>
-                <p>Free Admin Template Based On Twitter Bootstrap 3.x</p>
-                <p>Free Admin Template Based On Twitter Bootstrap 3.x</p>
-              </blockquote>
-              <h2 id="toc">TOC</h2>
-              <ul>
-                <li> <a href="#download">Download</a>  </li>
-                <li> <a href="#building">Building</a>  </li>
-                <li> <a href="#demo">Demo</a>  </li>
-                <li> <a href="#release-history">Release History</a>  </li>
-                <li> <a href="#credits">Credits</a>  </li>
-                <li> <a href="#author">Author</a>  </li>
-                <li> <a href="#license">License</a>  </li>
-              </ul>
-              <h2 id="download">Download</h2>
-              <ul>
-                <li>
-                  <p>Bootstrap 2.3.2
-                    <a href="https://github.com/onokumus/Bootstrap-Admin-Template/archive/v1.2.zip">v1.2</a> 
-                    ready for use</p>
-                </li>
-                <li>
-                  <p>Bootstrap 3.3.0
-                    <a href="https://github.com/onokumus/Bootstrap-Admin-Template/archive/master.zip">v2.3.2</a> 
-                    ready <code>dist</code> folder your use</p>
-                </li>
-              </ul>
-              <h2 id="building">Building</h2>
-              <h4 id="2-3-2-version">2.3.2 Version</h4>
-              <p>required
-                <a href="http://nodejs.org/">node.js</a>  &amp;
-                <a href="http://bower.io/">bower</a>  &amp;
-                <a href="http://gruntjs.com/getting-started">grunt</a> 
-              </p>
-              <pre><code class="language-shell">    $ git clone https://github.com/onokumus/Bootstrap-Admin-Template.git yourfoldername
-    $ cd yourfoldername
-    $ npm install
-    $ npm run build
-    $ grunt serve</code></pre>
-              <h4 id="2-3-2-rtl-version">2.3.2 RTL Version</h4>
-              <p>required
-                <a href="http://nodejs.org/">node.js</a>  &amp;
-                <a href="http://bower.io/">bower</a>  &amp;
-                <a href="http://gruntjs.com/getting-started">grunt</a> 
-              </p>
-              <pre><code class="language-shell">    $ git clone https://github.com/onokumus/Bootstrap-Admin-Template.git yourfoldername
-    $ cd yourfoldername
-    $ npm install
-    $ npm run buildrtl
-    $ grunt serve</code></pre>
-              <h4 id="1-2-version">1.2 Version</h4>
-              <pre><code>$ git clone -b v1.2 https://github.com/onokumus/Bootstrap-Admin-Template.git yourfoldername
-$ cd yourfoldername
-$ git submodule init
-$ git submodule update
-$ open index.html</code></pre>
-              <h2 id="demo">Demo</h2>
-              <ul>
-                <li> <a href="http://demo.onokumus.com/metis/">Demo v2.3.2</a>  </li>
-                <li> <a href="http://demo.onokumus.com/metis/rtl/">RTL v2.3.2</a>  </li>
-                <li>
-                  <a href="http://demo.onokumus.com/metis/v12">v1.2 <code>not development</code>
-                  </a> 
-                </li>
-              </ul>
-              <h2 id="credits">Credits</h2>
-              <ul>
-                <li> <a href="http://nodejs.org/">node.js</a>  </li>
-                <li> <a href="http://bower.io/">bower</a>  </li>
-                <li> <a href="http://gruntjs.com/">Grunt</a>  </li>
-                <li> <a href="http://assemble.io/">Assemble</a>  </li>
-                <li> <a href="http://jquery.com/">jQuery</a>  </li>
-                <li> <a href="http://getbootstrap.com/">Bootstrap</a>  </li>
-                <li> <a href="http://lesscss.org/">LESS</a>  </li>
-                <li> <a href="http://modernizr.com/">Modernizr</a>  </li>
-                <li> <a href="http://momentjs.com/">Moment.js</a>  </li>
-                <li> <a href="https://github.com/subtlepatterns/SubtlePatterns">SubtlePatterns</a>  </li>
-                <li> <a href="http://arshaw.com/fullcalendar/">FullCalendar</a>  </li>
-                <li> <a href="https://github.com/harvesthq/chosen">Chosen</a>  </li>
-                <li> <a href="http://ckeditor.com/">CKEditor</a>  </li>
-                <li> <a href="http://www.eyecon.ro/bootstrap-colorpicker/">Colorpicker for Bootstrap</a>  </li>
-                <li> <a href="http://www.datatables.net">Data Tables</a>  </li>
-                <li> <a href="http://www.eyecon.ro/bootstrap-datepicker">Datepicker for Bootstrap</a>  </li>
-                <li> <a href="http://elfinder.org">elFinder</a>  </li>
-                <li> <a href="http://rustyjeans.com/jquery-plugins/input-limiter">Input Limiter</a>  </li>
-                <li> <a href="http://jasny.github.com/bootstrap">Jasny Bootstrap</a>  </li>
-                <li> <a href="http://jqueryvalidation.org/">jQuery Validation</a>  </li>
-                <li> <a href="http://omnipotent.net/jquery.sparkline">jQuery Sparklines</a>  </li>
-                <li> <a href="http://daneden.github.io/animate.css/">Animate</a>  </li>
-                <li> <a href="http://www.jacklmoore.com/autosize">Autosize</a>  </li>
-                <li> <a href="http://keith-wood.name/countdown.html">Countdown</a>  </li>
-                <li> <a href="https://github.com/dangrossman/bootstrap-daterangepicker">Date range picker</a>  </li>
-                <li> <a href="http://www.flotcharts.org">Flot</a>  </li>
-                <li> <a href="http://jquery.malsup.com/form/">jQuery Form</a>  </li>
-                <li> <a href="http://thecodemine.org">Form Wizard</a>  </li>
-                <li> <a href="http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/">Gritter</a>  </li>
-                <li> <a href="https://github.com/brandonaaron/jquery-mousewheel">Mouse Wheel</a>  </li>
-                <li> <a href="https://github.com/kevinoconnor7/pagedown-bootstrap">PageDown-Bootstrap</a>  </li>
-                <li> <a href="https://github.com/moxiecode/plupload">Plupload</a>  </li>
-                <li> <a href="http://www.larentis.eu/switch/">Bootstrap Switch</a>  </li>
-                <li> <a href="http://tablesorter.com/">tablesorter</a>  </li>
-                <li> <a href="http://xoxco.com/projects/code/tagsinput/">tagsinput</a>  </li>
-                <li> <a href="http://jdewit.github.io/bootstrap-timepicker/">Bootstrap Timepicker</a>  </li>
-                <li> <a href="http://touchpunch.furf.com/">Touch Punch</a>  </li>
-                <li> <a href="http://uniformjs.com/">Uniform</a>  </li>
-                <li> <a href="http://www.position-relative.net/">Validation Engine</a>  </li>
-                <li> <a href="http://validval.frebsite.nl/">jquery.validVal</a>  </li>
-                <li> <a href="https://github.com/Waxolunist/bootstrap3-wysihtml5-bower">bootstrap3-wysihtml5-bower</a>  </li>
-                <li> <a href="https://github.com/sindresorhus/screenfull.js">screenfull.js</a>  </li>
-                <li> <a href="https://github.com/onokumus/metisMenu">metisMenu</a>  </li>
-              </ul>
-              <h2 id="author">Author</h2>
-              <p><strong>Osman Nuri Okumuş</strong> 
-              </p>
-              <ul>
-                <li> <a href="https://github.com/onokumus">github/onokumus</a>  </li>
-                <li> <a href="http://twitter.com/onokumus">twitter/onokumus</a>  </li>
-              </ul>
-              <h2 id="license">License</h2>
-              <p>Copyright (c) 2015 onokumus
-                <br>Released under the MIT license</p>
-              <hr>
-              <p><em>This file was generated by <a href="https://github.com/assemble/verb">verb</a>  on January 13, 2015.</em> 
-              </p>
+            <div class="col-lg-12" style="height:500px;">
+
             </div>
           </div><!-- /.inner -->
         </div><!-- /.outer -->
@@ -637,13 +491,13 @@ $ open index.html</code></pre>
         <!-- .well well-small -->
         <div class="well well-small dark">
           <ul class="list-unstyled">
-            <li>Visitor <span class="inlinesparkline pull-right">1,4,4,7,5,9,10</span> 
+            <li>Visitor <span class="inlinesparkline pull-right">1,4,4,7,5,9,10</span>
             </li>
-            <li>Online Visitor <span class="dynamicsparkline pull-right">Loading..</span> 
+            <li>Online Visitor <span class="dynamicsparkline pull-right">Loading..</span>
             </li>
-            <li>Popularity <span class="dynamicbar pull-right">Loading..</span> 
+            <li>Popularity <span class="dynamicbar pull-right">Loading..</span>
             </li>
-            <li>New Users <span class="inlinebar pull-right">1,3,4,5,3,5</span> 
+            <li>New Users <span class="inlinebar pull-right">1,3,4,5,3,5</span>
             </li>
           </ul>
         </div><!-- /.well well-small -->
@@ -665,29 +519,10 @@ $ open index.html</code></pre>
           <button class="btn btn-metis-6 btn-block">btn-metis-6</button>
         </div><!-- /.well well-small -->
 
-        <!-- .well well-small -->
-        <div class="well well-small dark">
-          <span>Default</span> <span class="pull-right"><small>20%</small> </span> 
-          <div class="progress xs">
-            <div class="progress-bar progress-bar-info" style="width: 20%"></div>
-          </div>
-          <span>Success</span> <span class="pull-right"><small>40%</small> </span> 
-          <div class="progress xs">
-            <div class="progress-bar progress-bar-success" style="width: 40%"></div>
-          </div>
-          <span>warning</span> <span class="pull-right"><small>60%</small> </span> 
-          <div class="progress xs">
-            <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
-          </div>
-          <span>Danger</span> <span class="pull-right"><small>80%</small> </span> 
-          <div class="progress xs">
-            <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
-          </div>
-        </div>
       </div><!-- /#right -->
     </div><!-- /#wrap -->
     <footer class="Footer bg-dark dker">
-      <p>2014 &copy; Metis Bootstrap Admin Template</p>
+      <p>2015 &copy; yield Mars</p>
     </footer><!-- /#footer -->
 
     <!-- #helpModal -->
@@ -730,3 +565,4 @@ $ open index.html</code></pre>
     <script src="/js/app.js"></script>
     <script src="/js/style-switcher.min.js"></script>
   </body>
+  </html>
