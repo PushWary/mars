@@ -29,8 +29,9 @@ class UserController extends BaseController {
         }
 
         $model = new LoginForm();
-        if ($this->getPostJSON()) {
-            if ($model->load($this->getPostJSON()) && $model->login()) {
+        $postData = $this->getPostJSON();
+        if ($postData) {
+            if ($model->load($postData) && $model->login()) {
                 $result = ['success'=>1, 'message'=> '登录成功'];
                 return json_encode($result);
             }else {
