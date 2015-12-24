@@ -32,6 +32,8 @@ class UserController extends BaseController {
         $postData = $this->getPostJSON();
         if ($postData) {
             if ($model->load($postData) && $model->login()) {
+                // $logContent = array('options'=>'登录', 'ip'=>$this->getIP());
+                // OperationLog::saveLog(json_encode($logContent), $model->id, OperationLog::TYPE_USER);
                 $result = ['success'=>1, 'message'=> '登录成功'];
                 return json_encode($result);
             }else {
