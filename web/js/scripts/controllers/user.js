@@ -11,16 +11,25 @@
         };
 
         $scope.chooseTab = function($tab) {
-            console.log(11);
+            var content = $("#user-content");
             switch ($tab) {
                 case TAB.LOGIN:
-                    $scope.content = UserService.loginPage();
+                    UserService.loginPage().then(function(result) {
+                        var data = result.data;
+                        content.html(data);
+                    });
                     break;
                 case TAB.LOSTPWD:
-                    $scope.content = UserService.lostpwdPage();
+                    UserService.lostpwdPage().then(function(result) {
+                        var data = result.data;
+                        content.html(data);
+                    });
                     break;
                 case TAB.REGISTER:
-                    $scope.content = UserService.registerPage();
+                    UserService.registerPage().then(function(result) {
+                        var data = result.data;
+                        content.html(data);
+                    });
                     break;
             }
         };

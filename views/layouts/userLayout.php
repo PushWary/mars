@@ -23,8 +23,7 @@ use yii\helpers\Url;
         <img src="/img/logo.png" alt="Metis Logo">
       </div>
       <hr>
-      <div class="tab-content" ng-model="content">
-          {{ content }}
+      <div class="tab-content" id="user-content">
         <?= $content ?>
       </div>
       <hr>
