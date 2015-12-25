@@ -54,11 +54,12 @@ class LoginForm extends Model
      * Logs in a user using the provided username and password.
      * @return boolean whether the user is logged in successfully
      */
-    public function login()
+    public function login($ip)
     {
         if ($this->validate()) {
             $user = $this->getUser();
-            $resultLog = OperationLog::saveLog($user->username.'登录', $user->id, OperationLog::TYPE_USER);
+            $logContent = array('options'=>'登录', 'ip'=>$ip);
+            $resultLog = OperationLog::saveLog(json_encode($logContent), $user->id, OperationLog::TYPE_USER);
             if (!$resultLog['result']) {
                 return false;
             }
