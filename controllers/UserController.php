@@ -58,11 +58,10 @@ class UserController extends BaseController {
             $this->layout = 'userLayout';
         }
 
-        if (isset($_POST['user'])) {
+        $postData = $this->getPostJSON();
+        if ($postData) {
             $model = new User();
-            $model->username = $_POST['user']['username'];
-            $model->password = $_POST['user']['password'];
-            $model->email = $_POST['user']['email'];
+            $model->load($postData);
             $model->authKey = $this->getUUID(self::AUTH_PREFIX);
             $transtion = Yii::$app->db->beginTransaction();
             try {
@@ -72,7 +71,9 @@ class UserController extends BaseController {
                     $userValidate->userid = $model->id;
                     if (!$userValidate->save()) {
                         $transtion->rollBack();
-                        return json_encode(['success'=>0, 'message'=>'注册失败']);
+                        $error = current($model->getErrors());
+                        $message = current($error);
+                        return json_encode(['success'=>0, 'message'=>$message]);
                     }
                     //$this->sendVaildateMail($model->email, 'user-validate', ['token'=>$userValidate->token]);
 
@@ -86,11 +87,13 @@ class UserController extends BaseController {
                     return json_encode(['success'=>1, 'message'=>'注册成功']);
                 } else {
                     $transtion->rollBack();
-                    return json_encode(['success'=>0, 'message'=>'注册失败']);
+                    $error = current($model->getErrors());
+                    $message = current($error);
+                    return json_encode(['success'=>0, 'message'=>$message]);
                 }
             } catch (Exception $e) {
                 $transtion->rollBack();
-                return json_encode(['success'=>0, 'message'=>'注册失败']);
+                return json_encode(['success'=>0, 'message'=>$e->getMessage()]);
             }
         }else {
             return $this->render('_register');

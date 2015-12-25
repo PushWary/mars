@@ -1,6 +1,6 @@
 
 <div id="signup" class="tab-pane active" ng-controller="RegisterCtrl">
-  <form action="/user/register" method="POST" ng-submit="submit(name, email, password, rePassword)">
+  <form method="POST" ng-submit="submit(name, email, password, rePassword)">
     <input type="text" placeholder="用户名" class="form-control top" id="register_username" name="user[username]" required maxlength="32"
         pattern="[0-9a-zA-Z!@#^&*()_+{}|:?\-=\[\].]{5,32}" title="字母,数字,下划线,长度5~32" ng-model="name">
     <input type="email" placeholder="邮箱" class="form-control middle" id="register_email" name="user[email]" required maxlength="32" ng-model="email">

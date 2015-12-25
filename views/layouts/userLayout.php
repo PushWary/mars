@@ -17,21 +17,21 @@ use yii\helpers\Url;
     <!-- Metis core stylesheet -->
     <link rel="stylesheet" href="/css/main.min.css">
   </head>
-  <body class="login" ng-app="marsApp" ng-controller="UserCtrl">
+  <body class="login" ng-app="marsApp">
     <div class="form-signin">
       <div class="text-center">
         <img src="/img/logo.png" alt="Metis Logo">
       </div>
       <hr>
-      <div class="tab-content" id="user-content">
+      <div class="tab-content" ui-view>
         <?= $content ?>
       </div>
       <hr>
       <div class="text-center">
         <ul class="list-inline">
-          <li> <a class="text-muted" href="javascript:void(0);" ng-click="chooseTab(1)">登录</a>  </li>
-          <li> <a class="text-muted" href="javascript:void(0);" ng-click="chooseTab(2)">忘记密码</a>  </li>
-          <li> <a class="text-muted" href="javascript:void(0);" ng-click="chooseTab(3)">注册</a>  </li>
+          <li> <a class="text-muted" ui-sref="login">登录</a>  </li>
+          <li> <a class="text-muted" ui-sref="lostpwd">忘记密码</a>  </li>
+          <li> <a class="text-muted" ui-sref="register">注册</a>  </li>
         </ul>
       </div>
     </div>
@@ -47,8 +47,8 @@ use yii\helpers\Url;
 
     <!--scripts-->
     <script src="/js/angular.js"></script>
+    <script src="/js/angular-ui-router.min.js"></script>
     <script src="/js/scripts/marsApp.js"></script>
-    <script src="/js/scripts/controllers/user.js"></script>
     <script src="/js/scripts/controllers/login.js"></script>
     <script src="/js/scripts/controllers/register.js"></script>
     <script src="/js/scripts/directives/alertmsg.js"></script>
