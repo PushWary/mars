@@ -4,13 +4,18 @@
     angular.module('marsApp').controller('RegisterCtrl', ['$location', '$scope', 'UserService', RegisterCtrl]);
 
     function RegisterCtrl($location, $scope, UserService) {
+        $scope.show = false;
 
         $scope.submit = function(name, email, password, rePassword) {
             var user = {'user' : {}};
             user['user'].username = name;
             user['user'].email = email;
             user['password'].password = password;
-            // TODO 实现表单的验证密码两次输入
+            if (password != rePassword) {
+                $scope.show = true;
+                $scope.alertMsg = "两次输入的密码不一致";
+                return false;
+            }
 
             UserService.register(user).then(function(result) {
                 var data = result.data;

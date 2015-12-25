@@ -22,7 +22,12 @@ class UserController extends BaseController {
      * 登录
      */
     public function actionLogin() {
-        $this->layout = 'userLayout';
+        $layout = Yii::$app->request->get('layout',0);
+        if($layout == 1) {
+            $this->layout = false;
+        } else {
+            $this->layout = 'userLayout';
+        }
 
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -46,7 +51,13 @@ class UserController extends BaseController {
      * 注册
      */
     public function actionRegister() {
-        $this->layout = 'userLayout';
+        $layout = Yii::$app->request->get('layout',0);
+        if($layout == 1) {
+            $this->layout = false;
+        } else {
+            $this->layout = 'userLayout';
+        }
+
         if (isset($_POST['user'])) {
             $model = new User();
             $model->username = $_POST['user']['username'];
@@ -61,25 +72,25 @@ class UserController extends BaseController {
                     $userValidate->userid = $model->id;
                     if (!$userValidate->save()) {
                         $transtion->rollBack();
-                        return "注册失败";
+                        return json_encode(['success'=>0, 'message'=>'注册失败']);
                     }
                     //$this->sendVaildateMail($model->email, 'user-validate', ['token'=>$userValidate->token]);
 
                     $resultLog = OperationLog::saveLog($model->username."注册", $model->id, OperationLog::TYPE_USER);
                     if (!$resultLog['result']) {
                         $transtion->rollBack();
-                        return $resultLog['message'];
+                        return json_encode(['success'=>0, 'message'=>$resultLog['message']]);
                     }
 
                     $transtion->commit();
-                    return "注册成功";
+                    return json_encode(['success'=>1, 'message'=>'注册成功']);
                 } else {
                     $transtion->rollBack();
-                    return "注册失败";
+                    return json_encode(['success'=>0, 'message'=>'注册失败']);
                 }
             } catch (Exception $e) {
                 $transtion->rollBack();
-                return "注册失败";
+                return json_encode(['success'=>0, 'message'=>'注册失败']);
             }
         }else {
             return $this->render('_register');
@@ -90,7 +101,12 @@ class UserController extends BaseController {
      * 忘记密码
      */
     public function actionLostpwd() {
-        $this->layout = 'userLayout';
+        $layout = Yii::$app->request->get('layout',0);
+        if($layout == 1) {
+            $this->layout = false;
+        } else {
+            $this->layout = 'userLayout';
+        }
         return $this->render('_lostpwd');
     }
 

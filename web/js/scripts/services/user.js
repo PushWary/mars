@@ -14,6 +14,18 @@
             return $http.post('user/register', user);
         };
 
+        service.loginPage = function() {
+            return $http.get('user/login?layout=1');
+        };
+
+        service.registerPage = function() {
+            return $http.get('user/register?layout=1');
+        };
+
+        service.lostpwdPage = function() {
+            return $http.get('user/lostpwd?layout=1');
+        };
+
         return service;
     }
 })();

@@ -10,4 +10,5 @@
         pattern="[0-9a-zA-Z!@#^&*()_+{}|:?\-=\[\].]{5,32}" title="字母,数字,下划线,长度5~32" ng-model="rePassword">
     <button class="btn btn-lg btn-success btn-block" type="submit">注册</button>
   </form>
+  <alertmsg message="{{ alertMsg }}" ng-show="show"></alertmsg>
 </div>
