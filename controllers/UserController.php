@@ -149,7 +149,7 @@ class UserController extends BaseController {
      *  访问主页
      */
     public function actionIndex() {
-        $this->layout = false;
+        $this->layout = "indexLayout";
         return $this->render("index");
     }
 
