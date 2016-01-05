@@ -21,7 +21,6 @@
 
             UserService.register(user).then(function(result) {
                 var data = result.data;
-                console.log(data);
                 if (data.success === 1) {
                     location.href = '/user/index';
                 } else {
