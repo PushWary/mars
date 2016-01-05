@@ -19,7 +19,7 @@
             UserService.login(loginForm).then(function(result) {
                 var data = result.data;
                 if(data.success === 1) {
-                    location.href = 'user/index';
+                    location.href = '/user/index';
                 }else {
                     $scope.show = true;
                     $scope.alertMsg = data.message;
