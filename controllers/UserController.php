@@ -10,6 +10,7 @@ use app\models\User;
 use app\models\LoginForm;
 use app\models\UserValidate;
 use app\models\OperationLog;
+use app\models\LocalAuth;
 
 class UserController extends BaseController {
 
@@ -66,6 +67,13 @@ class UserController extends BaseController {
             $transtion = Yii::$app->db->beginTransaction();
             try {
                 if ($model->save()) {
+
+                    // 增加本地用户名登录方式
+                    LocalAuth::saveByName($model->id, $model->name, $postData['User']['password']);
+
+                    // 增加本地邮箱登录方式
+                    LocalAuth::saveByEmail($model->id, $model->email, $postData['User']['password']);
+
                     $userValidate = new UserValidate();
                     $userValidate->email = $model->email;
                     $userValidate->userid = $model->id;
@@ -77,7 +85,7 @@ class UserController extends BaseController {
                     }
                     //$this->sendVaildateMail($model->email, 'user-validate', ['token'=>$userValidate->token]);
 
-                    $resultLog = OperationLog::saveLog($model->username."注册", $model->id, OperationLog::TYPE_USER);
+                    $resultLog = OperationLog::saveLog($model->name."注册", $model->id, OperationLog::TYPE_USER);
                     if (!$resultLog['result']) {
                         $transtion->rollBack();
                         return json_encode(['success'=>0, 'message'=>$resultLog['message']]);
@@ -128,7 +136,7 @@ class UserController extends BaseController {
                     return "激活失败";
                 }
 
-                $resultLog = OperationLog::saveLog($user->username."激活", $user->id, OperationLog::TYPE_USER);
+                $resultLog = OperationLog::saveLog($user->name."激活", $user->id, OperationLog::TYPE_USER);
                 if (!$resultLog['result']) {
                     $transtion->rollBack();
                     return $resultLog['message'];

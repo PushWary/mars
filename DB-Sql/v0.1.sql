@@ -37,7 +37,7 @@ CREATE TABLE `mars_user_validate` (
 
 // 本地登录验证表
 CREATE TABLE `mars_localauth` (
-  `id` int(11) unsigned NOT NULL COMMENT 'id',
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
   `uid` int(11) unsigned NOT NULL COMMENT '用户id',
   `username` varchar(32) NOT NULL COMMENT '登录名',
   `password` varchar(32) NOT NULL COMMENT '登录密码',
