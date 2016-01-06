@@ -41,6 +41,6 @@ CREATE TABLE `mars_localauth` (
   `uid` int(11) unsigned NOT NULL COMMENT '用户id',
   `username` varchar(32) NOT NULL COMMENT '登录名',
   `password` varchar(32) NOT NULL COMMENT '登录密码',
+  `type` tinyint(3) NOT NULL COMMENT '登录类型',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
-
