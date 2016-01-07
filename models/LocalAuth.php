@@ -27,6 +27,15 @@ class LocalAuth extends BaseRecord {
     }
 
     /**
+     * @return array the validation rules.
+     */
+    public function rules()
+    {
+        return [
+        ];
+    }
+
+    /**
      * 用户名的方式保存本地登录记录
      * @param $uid 用户id
      * @param $name 用户名
@@ -66,6 +75,10 @@ class LocalAuth extends BaseRecord {
         }
 
         return true;
+    }
+
+    public function getUser() {
+        return $this->hasOne(User::className(), ['id' => 'uid']);
     }
 }
 ?>

@@ -76,7 +76,10 @@ class LoginForm extends Model
     public function getUser()
     {
         if ($this->_user === false) {
-            $this->_user = User::findByUsername($this->username);
+            $auth = LocalAuth::find()->where(['username'=>$this->username])->one();
+            if ($auth != null) {
+                $this->_user = $auth->user;
+            }
         }
 
         return $this->_user;
