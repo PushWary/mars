@@ -80,6 +80,7 @@ class LoginForm extends Model
             $auth = LocalAuth::find()->where(['username'=>$this->username])->one();
             if ($auth != null) {
                 $this->_user = $auth->user;
+                $this->auth = $auth;
             }
         }
 
