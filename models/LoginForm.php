@@ -15,6 +15,7 @@ class LoginForm extends Model
     public $rememberMe = true;
 
     private $_user = false;
+    private $auth = false;
 
 
     /**
@@ -44,7 +45,7 @@ class LoginForm extends Model
         if (!$this->hasErrors()) {
             $user = $this->getUser();
 
-            if (!$user || !$user->validatePassword($this->password)) {
+            if (!$user || !$this->auth->validatePassword($this->password)) {
                 $this->addError($attribute, 'Incorrect username or password.');
             }
         }
@@ -76,7 +77,11 @@ class LoginForm extends Model
     public function getUser()
     {
         if ($this->_user === false) {
-            $this->_user = User::findByUsername($this->username);
+            $auth = LocalAuth::find()->where(['username'=>$this->username])->one();
+            if ($auth != null) {
+                $this->_user = $auth->user;
+                $this->auth = $auth;
+            }
         }
 
         return $this->_user;

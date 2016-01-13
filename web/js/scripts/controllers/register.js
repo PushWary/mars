@@ -10,7 +10,7 @@
             var user = {
                 'User': {}
             };
-            user['User'].username = name;
+            user['User'].name = name;
             user['User'].email = email;
             user['User'].password = password;
             if (password != rePassword) {
