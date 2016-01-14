@@ -4,18 +4,20 @@
     angular.module('marsApp').controller('LoginCtrl', ['$location', '$scope', 'UserService', LoginCtrl]);
 
     function LoginCtrl($location, $scope, UserService) {
+        $scope.loginForm = {
+            'LoginForm': {
+                'username': '',
+                'password': '',
+                'remberMe': false
+            }
+        };
 
         // 表单中输入值发生改变
         $scope.change = function(){
             $scope.show = false;
         };
 
-        $scope.submit = function(name, password, remberMe) {
-            var loginForm = {'LoginForm' : {}};
-            loginForm['LoginForm'].username = name;
-            loginForm['LoginForm'].password = password;
-            loginForm['LoginForm'].remberMe = remberMe;
-
+        $scope.submit = function(loginForm) {
             UserService.login(loginForm).then(function(result) {
                 var data = result.data;
                 if(data.success === 1) {
