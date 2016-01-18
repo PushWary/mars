@@ -115,8 +115,6 @@ use yii\helpers\Url;
 
             <!-- menu -->
             <ul id="menu" class="bg-blue dker">
-                <li class="nav-header">菜单</li>
-                <li class="nav-divider"></li>
                 <li>
                     <a href="">
                         <i class="fa fa-dashboard"></i><span class="link-title">&nbsp;主板</span>
