@@ -6,14 +6,17 @@
     function RegisterCtrl($location, $scope, UserService) {
         $scope.show = false;
 
-        $scope.submit = function(name, email, password, rePassword) {
-            var user = {
-                'User': {}
-            };
-            user['User'].name = name;
-            user['User'].email = email;
-            user['User'].password = password;
-            if (password != rePassword) {
+        $scope.user = {
+            'User': {
+                'name': '',
+                'email': '',
+                'password': ''
+            }
+        };
+
+        $scope.submit = function(user, rePassword) {
+
+            if ($scope.user.User.password != rePassword) {
                 $scope.show = true;
                 $scope.alertMsg = "两次输入的密码不一致";
                 return false;
