@@ -32,12 +32,18 @@ class LocalAuth extends BaseRecord {
     public function rules()
     {
         return [
-            ['password'=> 'validatePassword']
+            [['password'], 'validatePassword'],
+            [['uid','username','password','type'], 'required']
         ];
     }
 
     public function validatePassword($password) {
-        return $this->password == crypt(strip_tags($password), Yii::$app->params['passwordKey']);
+        if (!$this->isNewRecord) {
+            return $this->password == crypt(strip_tags($password), Yii::$app->params['passwordKey']);
+        } else {
+            return true;
+        }
+
     }
 
     /**
