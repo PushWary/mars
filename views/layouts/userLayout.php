@@ -12,7 +12,7 @@ use yii\helpers\Url;
     <meta name="msapplication-TileImage" content="/img/metis-tile.png" />
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- Metis core stylesheet -->
     <link rel="stylesheet" href="/css/main.min.css">
@@ -37,17 +37,17 @@ use yii\helpers\Url;
     </div>
 
     <!--jQuery -->
-    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/jquery/dist/jquery.min.js"></script>
 
     <!--Bootstrap -->
-    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!--User Register -->
     <script src="/js/user/register.js"></script>
 
     <!--scripts-->
-    <script src="/js/angular.js"></script>
-    <script src="/js/angular-ui-router.min.js"></script>
+    <script src="/libs/angular/angular.min.js"></script>
+    <script src="/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="/js/scripts/marsApp.js"></script>
     <script src="/js/scripts/controllers/login.js"></script>
     <script src="/js/scripts/controllers/register.js"></script>
