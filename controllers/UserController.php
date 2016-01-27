@@ -19,16 +19,30 @@ class UserController extends BaseController {
     // authKey的前缀
     const AUTH_PREFIX = "ams";
 
+    // 使用userlayout的action
+    const USER_LAYOUT_ACTION = ['login', 'register', 'lostpwd'];
+
+    public function beforeAction($action) {
+        if (!parent::beforeAction($action)) {
+            return false;
+        }
+
+        if (in_array($action->id, self::USER_LAYOUT_ACTION)) {
+            $layout = Yii::$app->request->get('layout', 0);
+            if ($layout == 1) {
+                $this->layout = false;
+            } else {
+                $this->layout = 'userLayout';
+            }
+        }
+
+        return true;
+    }
+
     /**
      * 登录
      */
     public function actionLogin() {
-        $layout = Yii::$app->request->get('layout',0);
-        if($layout == 1) {
-            $this->layout = false;
-        } else {
-            $this->layout = 'userLayout';
-        }
 
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -52,12 +66,6 @@ class UserController extends BaseController {
      * 注册
      */
     public function actionRegister() {
-        $layout = Yii::$app->request->get('layout',0);
-        if($layout == 1) {
-            $this->layout = false;
-        } else {
-            $this->layout = 'userLayout';
-        }
 
         $postData = $this->getPostJSON();
         if ($postData) {
@@ -112,12 +120,6 @@ class UserController extends BaseController {
      * 忘记密码
      */
     public function actionLostpwd() {
-        $layout = Yii::$app->request->get('layout',0);
-        if($layout == 1) {
-            $this->layout = false;
-        } else {
-            $this->layout = 'userLayout';
-        }
         return $this->render('_lostpwd');
     }
 
