@@ -120,7 +120,19 @@ class UserController extends BaseController {
      * 忘记密码
      */
     public function actionLostpwd() {
-        return $this->render('_lostpwd');
+        $postData = $this->getPostJSON();
+
+        if ($postData) {
+            if (LocalAuth::validEmail($postData['email'])) {
+                // TODO 发送邮件
+                return json_encode(['success'=>1, 'message'=>'已经有一封重置密码的邮件发到您的邮箱了']);
+            } else {
+                return json_encode(['success'=>0, 'message'=>'邮箱未注册']);
+            }
+        }else {
+            return $this->render('_lostpwd');
+        }
+
     }
 
     /**

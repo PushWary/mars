@@ -1,8 +1,9 @@
-<div id="forgot" class="tab-pane active">
-  <form action="index.html">
+<div id="forgot" class="tab-pane active" ng-controller="LostpwdCtrl">
+  <form method="POST" ng-submit="submit(email)">
     <p class="text-muted text-center">注册邮箱</p>
-    <input type="email" placeholder="mail@example.com" class="form-control">
+    <input type="email" placeholder="mail@example.com" class="form-control" ng-model="email" ng-change="change()">
     <br>
     <button class="btn btn-lg btn-danger btn-block" type="submit">找回密码</button>
   </form>
+  <alertmsg message="{{ alertMsg }}" ng-show="show"></alertmsg>
 </div>

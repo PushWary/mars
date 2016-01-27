@@ -71,6 +71,15 @@ class LocalAuth extends BaseRecord {
     }
 
     /**
+     * 判断邮箱是否已经注册
+     * @param $email 邮箱
+     * @return true or false
+     */
+    public static function validEmail($email) {
+        return LocalAuth::find()->where(['username'=>$email, 'type'=>static::TYPES['USEREMAIL']])->exists();
+    }
+
+    /**
      * 保存本地登录
      * @param $params 保存参数列表
      * @param $type 保存类型

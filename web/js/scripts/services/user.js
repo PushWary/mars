@@ -14,6 +14,10 @@
             return $http.post('/user/register', user);
         };
 
+        service.lostpwd = function(email) {
+            return $http.post('/user/lostpwd', email);
+        };
+
         service.loginPage = function() {
             return $http.get('/user/login?layout=1');
         };

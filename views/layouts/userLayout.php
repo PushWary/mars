@@ -51,6 +51,7 @@ use yii\helpers\Url;
     <script src="/js/scripts/marsApp.js"></script>
     <script src="/js/scripts/controllers/login.js"></script>
     <script src="/js/scripts/controllers/register.js"></script>
+    <script src="/js/scripts/controllers/lostpwd.js"></script>
     <script src="/js/scripts/directives/alertmsg.js"></script>
     <script src="/js/scripts/services/user.js"></script>
     <script src="/js/scripts/routes.js"></script>
