@@ -29,9 +29,9 @@ use yii\helpers\Url;
       <hr>
       <div class="text-center">
         <ul class="list-inline">
-          <li> <a class="text-muted" ui-sref="login">登录</a>  </li>
-          <li> <a class="text-muted" ui-sref="lostpwd">忘记密码</a>  </li>
-          <li> <a class="text-muted" ui-sref="register">注册</a>  </li>
+          <li> <a class="text-muted" href="javascript:void(0);" ui-sref="login">登录</a>  </li>
+          <li> <a class="text-muted" href="javascript:void(0);" ui-sref="lostpwd">忘记密码</a>  </li>
+          <li> <a class="text-muted" href="javascript:void(0);" ui-sref="register">注册</a>  </li>
         </ul>
       </div>
     </div>
