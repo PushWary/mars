@@ -30,6 +30,10 @@
             return $http.get('/user/lostpwd?layout=1');
         };
 
+        service.logout = function() {
+            return $http.post('/user/logout');
+        };
+
         return service;
     }
 })();

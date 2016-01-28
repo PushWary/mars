@@ -22,6 +22,29 @@ class UserController extends BaseController {
     // 使用userlayout的action
     const USER_LAYOUT_ACTION = ['login', 'register', 'lostpwd'];
 
+    // 访问控制
+    public function behaviors() {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['logout'],
+                'rules' => [
+                    [
+                        'actions' => ['logout'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+    }
+
     public function beforeAction($action) {
         if (!parent::beforeAction($action)) {
             return false;
@@ -184,6 +207,12 @@ class UserController extends BaseController {
         $mail->setTo($toEmail);
         $mail->setSubject("欢迎注册mars");
         $mail->send();
+    }
+
+    // 登出
+    public function actionLogout() {
+        Yii::$app->user->logout();
+        return json_encode(['success'=>1, 'message'=>'登出']);
     }
 
 }

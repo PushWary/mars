@@ -9,6 +9,20 @@ use yii\filters\VerbFilter;
 
 class BaseController extends Controller {
 
+    // 游客可访问action列表
+    const GUEST_ACTIONS = ['login', 'register', 'lostpwd'];
+
+    public function beforeAction($action) {
+        if (!parent::beforeAction($action)) {
+            return false;
+        }
+
+        if (Yii::$app->user->isGuest && !in_array($action->id, self::GUEST_ACTIONS)) {
+            $this->redirect('/user/login');
+        }
+        return true;
+    }
+
     /**
      *  获取uuid
      * @param $prefix 指定前缀

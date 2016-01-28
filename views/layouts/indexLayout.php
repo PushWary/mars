@@ -21,7 +21,7 @@ use yii\helpers\Url;
         <link rel="stylesheet/less" type="text/css" href="/css/theme.css">
         <script src="/js/modernizr/modernizr.min.js"></script>
     </head>
-    <body>
+    <body ng-app="marsApp">
     <div class="bg-dark dk" id="wrap" ui-view>
         <?= $content ?>
     </div>
@@ -38,5 +38,12 @@ use yii\helpers\Url;
     <script src="/libs/screenfull/dist/screenfull.min.js"></script>
     <script src="/js/core.min.js"></script>
     <script src="/js/app.js"></script>
+    <script src="/libs/angular/angular.min.js"></script>
+    <script src="/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="/js/scripts/marsApp.js"></script>
+    <script src="/js/scripts/routes.js"></script>
+    <script src="/js/scripts/services/user.js"></script>
+    <script src="/js/scripts/controllers/index.top.js"></script>
     </body>
 </html>

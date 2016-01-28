@@ -1,4 +1,4 @@
-<div id="top">
+<div id="top" ng-controller="IndexTopCtrl">
     <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container-fluid">
             <!-- logo-->
@@ -11,8 +11,8 @@
             <!-- 右边小工具列表 -->
             <div class="topnav">
                 <div class="btn-group">
-                  <a data-placement="bottom" data-original-title="Fullscreen" data-toggle="tooltip" class="btn btn-default btn-sm" id="toggleFullScreen">
-                    <i class="glyphicon glyphicon-fullscreen"></i>
+                  <a data-placement="bottom" data-original-title="登出" data-toggle="tooltip" class="btn btn-danger btn-sm" id="user-logout" href="javascript:void(0);" ng-click="logout()" >
+                    <i class="glyphicon glyphicon-log-out"></i>
                   </a>
                 </div>
             </div>
