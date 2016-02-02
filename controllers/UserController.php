@@ -195,7 +195,8 @@ class UserController extends BaseController {
      */
     public function actionIndex() {
         $this->layout = "indexLayout";
-        return $this->render("index");
+        $user = User::find()->where(['id'=>Yii::$app->user->getId()])->one();
+        return $this->render("index", ['user'=>$user]);
     }
 
     /**

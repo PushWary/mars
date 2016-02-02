@@ -22,7 +22,7 @@ use yii\helpers\Url;
         <script src="/js/modernizr/modernizr.min.js"></script>
     </head>
     <body ng-app="marsApp">
-    <div class="bg-dark dk" id="wrap" ui-view>
+    <div class="bg-dark dk" id="wrap" >
         <?= $content ?>
     </div>
 
