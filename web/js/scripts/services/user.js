@@ -18,18 +18,6 @@
             return $http.post('/user/lostpwd', email);
         };
 
-        service.loginPage = function() {
-            return $http.get('/user/login?layout=1');
-        };
-
-        service.registerPage = function() {
-            return $http.get('/user/register?layout=1');
-        };
-
-        service.lostpwdPage = function() {
-            return $http.get('/user/lostpwd?layout=1');
-        };
-
         service.logout = function() {
             return $http.post('/user/logout');
         };
