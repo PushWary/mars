@@ -18,6 +18,8 @@ use yii\helpers\Url;
         <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/main.min.css">
         <link rel="stylesheet" href="/libs/metisMenu/dist/metisMenu.min.css">
+        <link rel="stylesheet" href="/libs/ng-dialog/css/ngDialog.min.css">
+        <link rel="stylesheet" href="/libs/ng-dialog/css/ngDialog-theme-default.min.css">
         <link rel="stylesheet/less" type="text/css" href="/css/theme.css">
         <link rel="stylesheet" href="/css/user/index.css">
         <script src="/js/modernizr/modernizr.min.js"></script>
@@ -41,10 +43,12 @@ use yii\helpers\Url;
     <script src="/js/app.js"></script>
     <script src="/libs/angular/angular.min.js"></script>
     <script src="/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/libs/ng-dialog/js/ngDialog.min.js"></script>
 
     <script src="/js/scripts/marsApp.js"></script>
     <script src="/js/scripts/routes.js"></script>
     <script src="/js/scripts/services/user.js"></script>
     <script src="/js/scripts/controllers/index.top.js"></script>
+    <script src="/js/scripts/controllers/myInfo.js"></script>
     </body>
 </html>

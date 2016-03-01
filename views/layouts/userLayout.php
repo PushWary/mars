@@ -55,5 +55,6 @@ use yii\helpers\Url;
     <script src="/js/scripts/directives/alertmsg.js"></script>
     <script src="/js/scripts/services/user.js"></script>
     <script src="/js/scripts/routes.js"></script>
+    <script src="/libs/ng-dialog/js/ngDialog.min.js"></script>
   </body>
 </html>

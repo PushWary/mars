@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    var myApp = angular.module('marsApp', ['ui.router']);
+    var myApp = angular.module('marsApp', ['ui.router', 'ngDialog']);
 
     // http 拦截器
     myApp.factory('httpInterceptor', ['$q', '$injector', function($q, $injector) {

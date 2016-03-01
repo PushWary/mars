@@ -48,12 +48,12 @@
 
 <div id="left">
     <!-- 登录用户信息 -->
-    <div class="media user-media bg-dark dker">
+    <div class="media user-media bg-dark dker" ng-controller="MyInfoCtrl">
         <div class="user-media-toggleHover">
             <span class="fa fa-user"></span>
         </div>
         <div class="user-wrapper bg-dark">
-            <a class="user-link" href="">
+            <a class="user-link" href="" ng-click="openAvator()">
                 <img class="media-object img-thumbnail user-img" alt="头像" src="/img/user.gif">
                 <span class="label label-danger user-label">16</span>
             </a>
