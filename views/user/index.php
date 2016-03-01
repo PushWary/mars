@@ -59,9 +59,9 @@
             </a>
         </div>
         <div class="media-body">
-            <h5 class="media-heading">头像</h5>
+            <h5 class="media-heading">个人信息</h5>
             <ul class="list-unstyled user-info">
-                <li><a href=""><?php echo $user->name; ?></a></li>
+                <li><a href="" class="name"><?php echo $user->name; ?></a></li>
                 <li>创建于 :
                     <br>
                     <small>

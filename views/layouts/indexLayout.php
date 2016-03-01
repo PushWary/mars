@@ -19,6 +19,7 @@ use yii\helpers\Url;
         <link rel="stylesheet" href="/css/main.min.css">
         <link rel="stylesheet" href="/libs/metisMenu/dist/metisMenu.min.css">
         <link rel="stylesheet/less" type="text/css" href="/css/theme.css">
+        <link rel="stylesheet" href="/css/user/index.css">
         <script src="/js/modernizr/modernizr.min.js"></script>
     </head>
     <body ng-app="marsApp">
