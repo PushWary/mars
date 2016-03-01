@@ -46,15 +46,6 @@ use yii\helpers\Url;
     <script src="/js/user/register.js"></script>
 
     <!--scripts-->
-    <script src="/libs/angular/angular.min.js"></script>
-    <script src="/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="/js/scripts/marsApp.js"></script>
-    <script src="/js/scripts/controllers/login.js"></script>
-    <script src="/js/scripts/controllers/register.js"></script>
-    <script src="/js/scripts/controllers/lostpwd.js"></script>
-    <script src="/js/scripts/directives/alertmsg.js"></script>
-    <script src="/js/scripts/services/user.js"></script>
-    <script src="/js/scripts/routes.js"></script>
-    <script src="/libs/ng-dialog/js/ngDialog.min.js"></script>
+    <?php echo Yii::$app->view->renderFile('@app/views/layouts/_scripts.php'); ?>
   </body>
 </html>

@@ -34,21 +34,7 @@ use yii\helpers\Url;
         <p>2015 &copy; Mars by yield</p>
     </footer>
 
-    <script src="/libs/jquery/dist/jquery.min.js"></script>
-    <script src="/libs/less/dist/less.min.js"></script>
-    <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/libs/metisMenu/dist/metisMenu.min.js"></script>
-    <script src="/libs/screenfull/dist/screenfull.min.js"></script>
-    <script src="/js/core.min.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/libs/angular/angular.min.js"></script>
-    <script src="/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="/libs/ng-dialog/js/ngDialog.min.js"></script>
-
-    <script src="/js/scripts/marsApp.js"></script>
-    <script src="/js/scripts/routes.js"></script>
-    <script src="/js/scripts/services/user.js"></script>
-    <script src="/js/scripts/controllers/index.top.js"></script>
-    <script src="/js/scripts/controllers/myInfo.js"></script>
+    <!-- scripts -->
+    <?php echo Yii::$app->view->renderFile('@app/views/layouts/_scripts.php'); ?>
     </body>
 </html>
