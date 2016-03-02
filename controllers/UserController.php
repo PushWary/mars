@@ -12,6 +12,9 @@ use app\models\UserValidate;
 use app\models\OperationLog;
 use app\models\LocalAuth;
 
+/**
+ * 用户操作控制器
+ */
 class UserController extends BaseController {
 
     public $enableCsrfValidation = false;
@@ -51,12 +54,7 @@ class UserController extends BaseController {
         }
 
         if (in_array($action->id, self::USER_LAYOUT_ACTION)) {
-            $layout = Yii::$app->request->get('layout', 0);
-            if ($layout == 1) {
-                $this->layout = false;
-            } else {
-                $this->layout = 'userLayout';
-            }
+            $this->layout = 'userLayout';
         }
 
         return true;
