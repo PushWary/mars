@@ -8,6 +8,9 @@
 <script src="/libs/angular/angular.min.js"></script>
 <script src="/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="/libs/ng-dialog/js/ngDialog.min.js"></script>
+<script src="/libs/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js"></script>
+<script src="/libs/bootstrap-fileinput/js/fileinput.js"></script>
+<script src="/libs/bootstrap-fileinput/js/fileinput_locale_zh.js"></script>
 
 <script src="/js/scripts/marsApp.js"></script>
 <script src="/js/scripts/routes.js"></script>

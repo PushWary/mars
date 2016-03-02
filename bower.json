@@ -9,6 +9,7 @@
     "screenfull": "~3.0.0",
     "angular": "~1.4.9",
     "angular-ui-router": "~0.2.17",
-    "ng-dialog": "~0.5.8"
+    "ng-dialog": "~0.5.8",
+    "bootstrap-fileinput": "~4.3.1"
   }
 }

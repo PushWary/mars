@@ -20,6 +20,7 @@ use yii\helpers\Url;
         <link rel="stylesheet" href="/libs/metisMenu/dist/metisMenu.min.css">
         <link rel="stylesheet" href="/libs/ng-dialog/css/ngDialog.min.css">
         <link rel="stylesheet" href="/css/ngDialog-theme-dropin.css">
+        <link rel="stylesheet" href="/libs/bootstrap-fileinput/css/fileinput.min.css">
         <link rel="stylesheet/less" type="text/css" href="/css/theme.css">
         <link rel="stylesheet" href="/css/user/index.css">
         <script src="/js/modernizr/modernizr.min.js"></script>
