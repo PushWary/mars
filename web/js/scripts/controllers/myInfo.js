@@ -13,8 +13,14 @@
                     $rootScope.$on('ngDialog.opened', function(e, $dialog) {
                         $("#input-id").fileinput({
                             language: "zh",
-                            uploadUrl: "",
-                            allowedFileExtensions: ["jpg", "png", "gif"]
+                            uploadUrl: "/users/avator",
+                            allowedFileExtensions: ["jpg", "png", "gif"],
+                            // 设置额外上传数据
+                            uploadExtraData: {
+                                id: 1
+                            }
+                        }).on('fileuploaded', function(event, data, id, index){
+                            // 上传成功后回调函数
                         });
                     });
                 }
