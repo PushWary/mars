@@ -17,7 +17,7 @@ use app\models\LocalAuth;
  */
 class UserController extends BaseController {
 
-    public $enableCsrfValidation = false;
+    //public $enableCsrfValidation = false;
 
     // authKey的前缀
     const AUTH_PREFIX = "ams";

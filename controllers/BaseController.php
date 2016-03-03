@@ -9,6 +9,8 @@ use yii\filters\VerbFilter;
 
 class BaseController extends Controller {
 
+    public $enableCsrfValidation = false;
+
     // 游客可访问action列表
     const GUEST_ACTIONS = ['login', 'register', 'lostpwd'];
 
@@ -20,6 +22,13 @@ class BaseController extends Controller {
         if (Yii::$app->user->isGuest && !in_array($action->id, self::GUEST_ACTIONS)) {
             $this->redirect('/user/login');
         }
+
+        // 使用json提交的数据进行csrf验证
+        $postData = $this->getPostJSON();
+        if($postData && Yii::$app->getErrorHandler()->exception === null && !Yii::$app->getRequest()->validateCsrfToken($postData['_csrf'])) {
+            throw new BadRequestHttpException(Yii::t('yii', 'Unable to verify your data submission.'));
+        }
+
         return true;
     }
 

@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Url;
+use yii\helpers\Html;
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +11,7 @@ use yii\helpers\Url;
     <title>欢迎来到火星</title>
     <meta name="msapplication-TileColor" content="#5bc0de" />
     <meta name="msapplication-TileImage" content="/img/metis-tile.png" />
+    <?php echo Html::csrfMetaTags(); ?>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">

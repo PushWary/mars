@@ -18,6 +18,9 @@
                 return response;
             },
             'request': function(config) {
+                if (config.method === "POST") {
+                    config.data['_csrf'] = $("meta[name='csrf-token']").attr("content");
+                }
                 return config;
             },
             'requestError': function(config) {
