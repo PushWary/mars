@@ -7,7 +7,7 @@ use yii\helpers\Url;
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Login Page</title>
+    <title>欢迎来到火星</title>
     <meta name="msapplication-TileColor" content="#5bc0de" />
     <meta name="msapplication-TileImage" content="/img/metis-tile.png" />
 
