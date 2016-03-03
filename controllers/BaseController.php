@@ -22,7 +22,6 @@ class BaseController extends Controller {
         if (Yii::$app->user->isGuest && !in_array($action->id, self::GUEST_ACTIONS)) {
             $this->redirect('/user/login');
         }
-
         // 使用json提交的数据进行csrf验证
         $postData = $this->getPostJSON();
         if($postData && Yii::$app->getErrorHandler()->exception === null && !Yii::$app->getRequest()->validateCsrfToken($postData['_csrf'])) {

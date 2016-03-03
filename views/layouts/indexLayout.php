@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Url;
+use yii\helpers\Html;
 ?>
 <!DOCTYPE html>
 <html class="no-js">
@@ -11,6 +12,7 @@ use yii\helpers\Url;
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!--移动优先-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?php echo Html::csrfMetaTags(); ?>
 
         <!-- lib css -->
         <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">

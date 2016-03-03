@@ -17,7 +17,7 @@
                             allowedFileExtensions: ["jpg", "png", "gif"],
                             // 设置额外上传数据
                             uploadExtraData: {
-                                id: 1
+                                _csrf: $("meta[name='csrf-token']").attr("content")
                             }
                         }).on('fileuploaded', function(event, data, id, index){
                             // 上传成功后回调函数

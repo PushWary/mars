@@ -12,7 +12,7 @@ use app\models\User;
  */
 class UsersController extends BaseController {
 
-    public $enableCsrfValidation = false; // 关闭csrf
+    public $enableCsrfValidation = true; // 关闭csrf
 
     public function actionAvator() {
         return "{}";
