@@ -7,7 +7,7 @@ use yii\helpers\Html;
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>Mars</title>
+        <title>你已经登录火星</title>
         <!--兼容IE-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!--移动优先-->
