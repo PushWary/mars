@@ -12,8 +12,13 @@
                     // 当dialog被打开时调用
                     $rootScope.$on('ngDialog.opened', function(e, $dialog) {
                         $("#input-id").fileinput({
+                            showClose: false,
+                            showCaption: false,
                             language: "zh",
                             uploadUrl: "/users/avator",
+                            defaultPreviewContent: "<img class='media-object img-thumbnail user-img' alt='头像' src='/img/user.gif' style='width:218px'>",
+                            browseLabel: '选择图片',
+                            browseIcon: "<i class='glyphicon glyphicon-folder-open'></i>",
                             allowedFileExtensions: ["jpg", "png", "gif"],
                             // 设置额外上传数据
                             uploadExtraData: {
