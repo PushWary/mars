@@ -10,10 +10,14 @@
 
             <!-- 右边小工具列表 -->
             <div class="topnav">
-                <div class="btn-group">
-                  <a data-placement="bottom" data-original-title="登出" data-toggle="tooltip" class="btn btn-danger btn-sm" id="user-logout" href="javascript:void(0);" ng-click="logout()" >
-                    <i class="glyphicon glyphicon-log-out"></i>
-                  </a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="text-decoration:none;">
+                      <i class="glyphicon glyphicon-user"></i>
+                      <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li> <a href="javascript:void(0);" ng-click="logout()">退出</a>  </li>
+                    </ul>
                 </div>
             </div>
 
