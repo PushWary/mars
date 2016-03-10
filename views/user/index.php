@@ -21,10 +21,6 @@
                 </div>
             </div>
 
-            <!-- 左边导航列表-->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <?php echo Yii::$app->view->renderFile('@app/views/user/_topnav.php'); ?>
-            </div>
         </div>
     </nav><!-- /.navbar -->
 
