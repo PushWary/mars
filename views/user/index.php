@@ -15,7 +15,7 @@
                       <i class="glyphicon glyphicon-user"></i>&nbsp;个人中心
                       <b class="caret"></b>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="min-width:88px">
                       <li> <a href="javascript:void(0);" ng-click="logout()">退出</a>  </li>
                     </ul>
                 </div>
