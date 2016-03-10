@@ -12,7 +12,7 @@
             <div class="topnav">
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="text-decoration:none;">
-                      <i class="glyphicon glyphicon-user"></i>
+                      <i class="glyphicon glyphicon-user"></i>&nbsp;个人中心
                       <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
