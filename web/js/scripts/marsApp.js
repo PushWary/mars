@@ -18,8 +18,13 @@
                 return response;
             },
             'request': function(config) {
+                var csrfToken = $("meta[name='csrf-token']").attr("content");
                 if (config.method === "POST") {
-                    config.data['_csrf'] = $("meta[name='csrf-token']").attr("content");
+                    // 如果未传数据的post提交，data是undefind，如退出
+                    if (config.data === undefined) {
+                        config.data = {};
+                    }
+                    config.data['_csrf'] = csrfToken;
                 }
                 return config;
             },
