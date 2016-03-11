@@ -54,7 +54,7 @@
         </div>
         <div class="user-wrapper bg-dark">
             <a class="user-link" href="" ng-click="openAvator()">
-                <img class="media-object img-thumbnail user-img" alt="头像" src="/img/user.gif">
+                <img class="media-object img-thumbnail user-img" alt="头像" src="<?php echo isset($user->avator)?"/".$user->avator:"/img/user.gif";?>">
                 <span class="label label-danger user-label">16</span>
             </a>
         </div>
