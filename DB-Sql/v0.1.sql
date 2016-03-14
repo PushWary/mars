@@ -19,6 +19,7 @@ CREATE TABLE `mars_user` (
   `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '状态，0:未激活，1:激活',
   `created` datetime NOT NULL COMMENT '创建时间',
   `authKey` varchar(62) NOT NULL COMMENT '验证key',
+  `avator` varchar(255) DEFAULT NULL COMMENT '头像的路径',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8
 
