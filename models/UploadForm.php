@@ -8,6 +8,8 @@ use Imagine\Gd\Imagine;
 use Imagine\Image\Box;
 use Imagine\Image\ImageInterface;
 
+use app\commands\Commons;
+
 class UploadForm extends model {
 
     /**
@@ -25,8 +27,9 @@ class UploadForm extends model {
         if ($this->validate()) {
             $name = $this->imageFile->name;
             $fileType = substr($name, strripos($name,'.')+1);
-            $path = 'uploads/'.$this->imageFile->baseName . '.'. $fileType;  // 保存文件路径
-            $avator = 'avator/'.$this->imageFile->baseName . '.'. $fileType;  // 缩略图路径
+            $fileName = Commons::createUUID().'.'.$fileType;
+            $path = 'uploads/'.$fileName;  // 保存文件路径
+            $avator = 'avator/'.$fileName;  // 缩略图路径
             $transtion =  Yii::$app->db->beginTransaction();
 
             // 获取当前用户
