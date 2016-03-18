@@ -25,18 +25,15 @@ class UploadForm extends model {
 
     public function upload() {
         if ($this->validate()) {
-            $name = $this->imageFile->name;
             $fileType = $this->imageFile->extension;
             $fileName = Commons::createUUID().'.'.$fileType;
-            $path = 'uploads/'.$fileName;  // 保存文件路径
             $avator = 'avator/'.$fileName;  // 缩略图路径
             $transtion =  Yii::$app->db->beginTransaction();
 
             // 获取当前用户
             $user = User::find()->where(['id'=>Yii::$app->user->getId()])->one();
             try {
-                $this->imageFile->saveAs($path);
-                $this->thumbnailImage($path, $avator);   // 压缩缩略图片
+                $this->thumbnailImage($this->imageFile->tempName, $avator);  // 压缩缩略图片
                 $user->avator = $avator;  // 保存文件路径到数据表中
                 if (!$user->save()) {
                     return false;
