@@ -26,7 +26,7 @@ class UploadForm extends model {
     public function upload() {
         if ($this->validate()) {
             $name = $this->imageFile->name;
-            $fileType = substr($name, strripos($name,'.')+1);
+            $fileType = $this->imageFile->extension;
             $fileName = Commons::createUUID().'.'.$fileType;
             $path = 'uploads/'.$fileName;  // 保存文件路径
             $avator = 'avator/'.$fileName;  // 缩略图路径
