@@ -33,7 +33,8 @@ class UploadForm extends model {
             // 获取当前用户
             $user = User::find()->where(['id'=>Yii::$app->user->getId()])->one();
             try {
-                $this->thumbnailImage($this->imageFile->tempName, $avator);  // 压缩缩略图片
+                // 采用公共模块的压缩图片的方法
+                Commons::thumbnailImage($this->imageFile->tempName, $avator, 80, 80);
                 $user->avator = $avator;  // 保存文件路径到数据表中
                 if (!$user->save()) {
                     return false;
@@ -49,19 +50,5 @@ class UploadForm extends model {
         }
     }
 
-    /**
-     * 缩略图生成函数
-     * @param $sourcPath 源路径
-     * @param $outPath 输出路径
-     */
-    private function thumbnailImage($sourcPath, $outPath) {
-        $imagine = new Imagine();
-        $size = new Box(40, 40);
-        $mode = ImageInterface::THUMBNAIL_OUTBOUND;
-
-        $imagine->open($sourcPath)
-            ->thumbnail($size, $mode)
-            ->save($outPath);
-    }
 }
 ?>

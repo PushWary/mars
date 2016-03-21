@@ -20,6 +20,21 @@ class Commons {
         $uuid .= substr($str,20,12);
         return $uuid;
     }
+
+    /**
+     * 保存缩略图生成函数
+     * @param string $sourcePath 源路径
+     * @param string $outPath 输出路径
+     * @param int $width 宽度
+     * @param int $height 高度
+     */
+    public static function thumbnailImage($sourcePath, $outPath, $width, $height) {
+        $imageine = new \Imagine\Gd\Imagine();
+        $size = new \Imagine\Image\Box($width, $height);
+        $mode = \Imagine\Image\ImageInterface::THUMBNAIL_OUTBOUND;
+
+        $imageine->open($sourcePath)->thumbnail($size, $mode)->save($outPath);
+    }
 }
 
  ?>
