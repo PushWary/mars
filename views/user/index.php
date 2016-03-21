@@ -75,7 +75,7 @@
     <?php echo Yii::$app->view->renderFile('@app/views/user/_menu.php');?>
 </div><!-- /#left -->
 <!-- 主体内容 -->
-<div id="content" style="height:800px" ui-view>
+<div id="content" ui-view>
     <?php
         include("../web/view/user/index.html");
     ?>

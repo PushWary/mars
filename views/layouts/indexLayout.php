@@ -18,7 +18,7 @@ use yii\helpers\Html;
         <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
         <!-- <link rel="stylesheet" href="/lib/components-font-awesome/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/main.min.css">
+        <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/libs/metisMenu/dist/metisMenu.min.css">
         <link rel="stylesheet" href="/libs/ng-dialog/css/ngDialog.min.css">
         <link rel="stylesheet" href="/css/ngDialog-theme-dropin.css">
@@ -28,7 +28,7 @@ use yii\helpers\Html;
         <script src="/js/modernizr/modernizr.min.js"></script>
     </head>
     <body ng-app="marsApp">
-    <div class="bg-dark dk" id="wrap" >
+    <div class="bg-dark dk" id="wrap" style="height:100%">
         <?= $content ?>
     </div>
 
