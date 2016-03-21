@@ -11,6 +11,7 @@ use app\models\LoginForm;
 use app\models\UserValidate;
 use app\models\OperationLog;
 use app\models\LocalAuth;
+use app\commands\Commons;
 
 /**
  * 用户操作控制器
@@ -92,7 +93,7 @@ class UserController extends BaseController {
         if ($postData) {
             $model = new User();
             $model->load($postData);
-            $model->authKey = $this->getUUID(self::AUTH_PREFIX);
+            $model->authKey = self::AUTH_PREFIX.Commons::createUUID();
             $transtion = Yii::$app->db->beginTransaction();
             try {
                 if ($model->save()) {
