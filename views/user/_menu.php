@@ -1,8 +1,13 @@
 <!-- menu -->
 <ul id="menu" class="bg-blue dker">
     <li>
-        <a href="">
+        <a href="javascript:void(0);" ui-sref="index">
             <i class="fa fa-dashboard"></i><span class="link-title">&nbsp;主板</span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:void(0);" ui-sref="order">
+            <i class="fa fa-cube"></i><span class="link-title">&nbsp;订单</span>
         </a>
     </li>
     <li>
