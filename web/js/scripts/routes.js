@@ -2,6 +2,9 @@
     'use strict';
 
     angular.module('marsApp').config(function($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.otherwise('/');
+
         $stateProvider.state('login', {
             url: "/user/login",
             templateUrl: "/view/user/login.html"
