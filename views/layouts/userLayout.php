@@ -18,6 +18,7 @@ use yii\helpers\Html;
 
     <!-- Metis core stylesheet -->
     <link rel="stylesheet" href="/css/main.min.css">
+    <base href="/">
   </head>
   <body class="login" ng-app="marsApp">
     <div class="form-signin">

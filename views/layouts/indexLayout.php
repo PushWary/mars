@@ -26,6 +26,7 @@ use yii\helpers\Html;
         <link rel="stylesheet/less" type="text/css" href="/css/theme.css">
         <link rel="stylesheet" href="/css/user/index.css">
         <script src="/js/modernizr/modernizr.min.js"></script>
+        <base href="/">
     </head>
     <body ng-app="marsApp">
     <div class="bg-dark dk" id="wrap" style="height:100%">
