@@ -25,6 +25,7 @@ use yii\helpers\Html;
         <link rel="stylesheet" href="/libs/bootstrap-fileinput/css/fileinput.min.css">
         <link rel="stylesheet/less" type="text/css" href="/css/theme.css">
         <link rel="stylesheet" href="/css/user/index.css">
+        <link rel="stylesheet" href="/css/common.css">
         <script src="/js/modernizr/modernizr.min.js"></script>
         <base href="/">
     </head>

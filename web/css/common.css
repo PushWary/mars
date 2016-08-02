@@ -1,0 +1,8 @@
+
+/* 表格工具栏样式 */
+.table-tools{
+    position: relative;
+    float: right;
+    margin-top: 3px;
+    margin-right: 5px;
+}
