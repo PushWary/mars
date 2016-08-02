@@ -20,11 +20,7 @@
                 url: "^/user/index",
                 templateUrl: "/view/user/index.html"
             }).state("order", {
-                url: "^/order",
-                templateUrl: "/view/order/index.html",
-                redirectTo: "order.index"
-            }).state("order.index", {
-                url: "^/index",
+                url: "^/order/index",
                 templateUrl: "/view/order/index.html"
             });
     }]);
