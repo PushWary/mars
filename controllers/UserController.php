@@ -190,15 +190,6 @@ class UserController extends BaseController {
     }
 
     /**
-     *  访问主页
-     */
-    public function actionIndex() {
-        $this->layout = "indexLayout";
-        $user = User::find()->where(['id'=>Yii::$app->user->getId()])->one();
-        return $this->render("index", ['user'=>$user]);
-    }
-
-    /**
      * 发送验证邮件方法
      * @param $toEmail 发送邮件的目标邮箱
      */
