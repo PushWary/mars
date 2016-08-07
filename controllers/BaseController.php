@@ -12,15 +12,12 @@ class BaseController extends Controller {
 
     public $enableCsrfValidation = false;
 
-    // 游客可访问action列表
-    const GUEST_ACTIONS = ['login', 'register', 'lostpwd'];
-
     public function beforeAction($action) {
         if (!parent::beforeAction($action)) {
             return false;
         }
 
-        if (Yii::$app->user->isGuest && !in_array($action->id, self::GUEST_ACTIONS)) {
+        if (Yii::$app->user->isGuest && !in_array($action->id, Yii::$app->params['GUEST_ACTIONS'])) {
             $this->redirect('/user/login');
         }
         // 使用json提交的数据进行csrf验证
