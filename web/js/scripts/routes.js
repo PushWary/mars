@@ -11,16 +11,12 @@
                 url: "^/user/login",
                 templateUrl: "/view/user/login.html"
             }).state('lostpwd', {
-                url: "^/user/lostpwd",
                 templateUrl: "/view/user/lostpwd.html"
             }).state("register", {
-                url: "^/user/register",
                 templateUrl: "/view/user/register.html"
             }).state("index", {
-                url: "^/user/index",
                 templateUrl: "/view/user/index.html"
             }).state("order", {
-                url: "^/order/index",
                 templateUrl: "/view/order/index.html"
             });
     }]);
