@@ -17,7 +17,7 @@ use yii\helpers\Html;
     <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- Metis core stylesheet -->
-    <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="/css/main.css">
     <base href="/">
   </head>
   <body class="login" ng-app="marsApp">

@@ -2574,7 +2574,7 @@ body.error .logo h1 {
 .login .form-signin {
   max-width: 330px;
   padding: 20px;
-  margin: 0 auto;
+  margin: 200px auto;
   background-color: #fff;
   border-radius: 3px;
 }
